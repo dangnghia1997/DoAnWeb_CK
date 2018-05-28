@@ -14,6 +14,7 @@
                 <div class="navbar-collapse collapse">
                 
                 <script>
+				// Giữ nút ở menu
 $(function() {
 	
 	pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);

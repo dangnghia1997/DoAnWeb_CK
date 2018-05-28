@@ -1,3 +1,9 @@
+/*Định nghĩa font mới down về*/
+@font-face{
+	font-family:'Roboto';
+	src:url(../fonts/Roboto-Regular.ttf);
+}
+/*End Định nghĩa font mới down về*/
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -27,7 +33,7 @@ h6 {
     font-weight: 700;
     margin: 0 0 15px;
 }
-body { font-family: 'Titillium Web', sans-serif; }
+body { font-family: 'Roboto'; }
 
 
 
@@ -1003,3 +1009,4 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #1abc9c;
 }
+
