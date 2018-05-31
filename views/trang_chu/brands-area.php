@@ -4,16 +4,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="brand-wrapper">
-                        <h2 class="section-title">Brands</h2>
+                        <h2 class="section-title">Nhà Cung Cấp</h2>
                         <div class="brand-list">
-                            <img src="public/layout/img/services_logo__1.jpg" alt="">
-                            <img src="public/layout/img/services_logo__2.jpg" alt="">
-                            <img src="public/layout/img/services_logo__3.jpg" alt="">
-                            <img src="public/layout/img/services_logo__4.jpg" alt="">
-                            <img src="public/layout/img/services_logo__1.jpg" alt="">
-                            <img src="public/layout/img/services_logo__2.jpg" alt="">
-                            <img src="public/layout/img/services_logo__3.jpg" alt="">
-                            <img src="public/layout/img/services_logo__4.jpg" alt="">                            
+                        <?php
+                        foreach($danh_sach_nha_cung_cap as $nha_cung_cap)
+						{
+						?>
+                        	<a href="san_pham.php?ma_nha_cung_cap=<?php echo $nha_cung_cap->ma_nha_cung_cap;?>">
+                            	<img src="public/layout/images/nha_cung_cap/<?php echo $nha_cung_cap->hinh;?>" alt="">
+                            </a>
+                         <?php
+						}
+						 ?>                               
                         </div>
                     </div>
                 </div>

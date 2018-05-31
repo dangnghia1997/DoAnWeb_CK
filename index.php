@@ -1,4 +1,5 @@
 <?php
-$view="views/trang_chu/v_trang_chu.php";
-include("templates/layout.php");
+include("controllers/c_trang_chu.php");
+$Trang_Chu=new C_trang_chu();
+$Trang_Chu->Hien_Thi_Trang_Chu();
 ?>

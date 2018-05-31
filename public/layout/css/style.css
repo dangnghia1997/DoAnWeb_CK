@@ -1,9 +1,9 @@
-/*Định nghĩa font mới down về*/
+/*Äá»‹nh nghÄ©a font má»›i down vá»*/
 @font-face{
 	font-family:'Roboto';
 	src:url(../fonts/Roboto-Regular.ttf);
 }
-/*End Định nghĩa font mới down về*/
+/*End Äá»‹nh nghÄ©a font má»›i down vá»*/
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -298,12 +298,14 @@ z-index: 9;
     font-size: 16px;
     left: 10%;
     margin: 0;
-    padding: 10px;
+    padding: 6px;
     position: absolute;
     text-align: center;
     text-transform: uppercase;
     border: 1px solid #1abc9c;
-    width: 80%;z-index: 99;transition: .4s;
+    width: 80%;
+    z-index: 99;
+    transition: .4s;
 }
 .product-hover a:hover {
   background: #000;
@@ -1009,4 +1011,62 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #1abc9c;
 }
+
+
+
+/*menu-left*/
+ul.menu-left {
+    padding:  0;
+    list-style:  none;
+}
+ul.menu-left li.css
+{
+	position:relative;
+	display:block;
+	border-bottom:  1px solid gray;
+	padding: 3% 2%;
+}
+ul.menu-left li a{
+	position:relative;
+	color:black;
+	/*display: block;*/
+	text-decoration:  none;
+}
+
+ul.menu-left li a:hover
+{
+	color:green;
+}
+
+ul.sub-menu
+{
+	list-style:none;
+	padding-left:10px;
+}
+
+ul.sub-menu li{
+	position:relative;
+	display:block;
+}
+
+span.arrow 
+{
+	position:absolute;
+	right:0;
+	padding-right: 4%;
+	font-size: 138%;
+	cursor:  pointer;
+}
+
+ul.menu-left li ul.sub-menu li{
+	border-top:1px solid gray;
+	padding: 2% 2%;
+}
+ul.menu-left li{
+  border-top:1px solid;
+  border-left:1px solid;
+  border-right:1px solid;
+}
+
+/*END menu-left*/
 
