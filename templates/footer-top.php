@@ -18,26 +18,26 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title">Dịch vụ</h2>
                         <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
+                            <li><a href=".">Trang Chủ</a></li>
+                            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="lien_he.php">Liên hệ</a></li>
+                            
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                        <h2 class="footer-wid-title">Danh mục</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
+                            <li><a href="#">Phát triển cơ</a></li>
+                            <li><a href="#">Tăng Cân</a></li>
+                            <li><a href="#">Tăng Sức Mạnh</a></li>
+                            <li><a href="#">Giảm cân - Đốt Mỡ</a></li>
+                            <li><a href="#">Khác</a></li>
                         </ul>                        
                     </div>
                 </div>

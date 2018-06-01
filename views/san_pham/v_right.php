@@ -1,5 +1,9 @@
 <div class="col-md-9">
 
+<<<<<<< HEAD
+<?php
+foreach($ds_tat_ca_san_pham as $sanpham)
+=======
 <?php 
 $danh_muc=array("wheycasein"=>"xml/phat_trien_co/whey_protein/wheycasein.xml",
 				"wheyconcentrate"=>"xml/phat_trien_co/whey_protein/wheyconcentrate.xml",
@@ -70,11 +74,27 @@ $ds_san_pham=simplexml_load_file($path);
 
 <?php
 foreach($ds_san_pham->sp as $sanpham)
+>>>>>>> 527178d2f96c5ca383bcd0e38eed2e6ac7a58faf
 {
 ?>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
+<<<<<<< HEAD
+                        <a href="chi_tiet_san_pham.php?ma_san_pham=<?php echo $sanpham->ma_san_pham;?>" title="<?php echo $sanpham->ten_san_pham; ?>" id="tensp<?php echo $sanpham->ma_san_pham;?>">
+                            <img src="public/layout/images/<?php echo $sanpham->hinh?>" alt=""></a>
+                        </div>
+                        <h2><a href="chi_tiet_san_pham.php?ma_san_pham=<?php echo $sanpham->ma_san_pham;?>" title="<?php echo $sanpham->ten_san_pham; ?>" id="tensp<?php echo $sanpham->ma_san_pham;?>"><?php echo $sanpham->ten_san_pham ?></a></h2>
+                        <div class="product-carousel-price">
+                            <ins><?php echo $sanpham->don_gia?></ins>
+                            <input type="hidden" id="dongia<?php echo $sanpham->ma_san_pham?>" value="<?php echo $sanpham->gia?>" />
+                            <input type="hidden" id="hinh<?php echo $sanpham->ma_san_pham?>" value="<?php echo $sanpham->hinh?>" />
+                            <input type="hidden" id="soluong<?php echo $sanpham->ma_san_pham;?>" value="1" />
+                        </div>  
+                        
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="javascript:XL_ajax(<?php echo $sanpham->ma_san_pham?>)" onclick="window.location.reload(true)">Thêm vào giỏ</a>
+=======
                             <img src="public/images/<?php echo $sanpham->hinh?>" alt="">
                         </div>
                         <h2><a href="chitietsanpham.php?id=<?php echo $sanpham->id;?><?php echo $tb_ma_loai ?>" title="<?php echo $sanpham->ten_sp; ?>" id="tensp<?php echo $sanpham->id?>"><?php echo $sanpham->ten_sp ?></a></h2>
@@ -87,17 +107,22 @@ foreach($ds_san_pham->sp as $sanpham)
                         
                         <div class="product-option-shop">
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="javascript:XL_ajax(<?php echo $sanpham->id?>)" onclick="window.location.reload(true)">Thêm vào giỏ</a>
+>>>>>>> 527178d2f96c5ca383bcd0e38eed2e6ac7a58faf
                         </div>                      
                     </div>
                 </div>
                 
 <?php 
 }
+<<<<<<< HEAD
+?>                                                    
+=======
 
 
 ?>  
                 
                 
                        
+>>>>>>> 527178d2f96c5ca383bcd0e38eed2e6ac7a58faf
                 
 </div>
