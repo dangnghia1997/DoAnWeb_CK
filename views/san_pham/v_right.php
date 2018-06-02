@@ -30,13 +30,5 @@ foreach($ds_tat_ca_san_pham as $sanpham)
 }
 
 ?>                                                    
-
-
-
-?>  
-                
-                
-                       
-
-                
+               
 </div>

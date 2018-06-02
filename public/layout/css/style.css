@@ -1,9 +1,9 @@
-/*Äá»‹nh nghÄ©a font má»›i down vá»*/
+/*Ã„ÂÃ¡Â»â€¹nh nghÃ„Â©a font mÃ¡Â»â€ºi down vÃ¡Â»Â*/
 @font-face{
 	font-family:'Roboto';
 	src:url(../fonts/Roboto-Regular.ttf);
 }
-/*End Äá»‹nh nghÄ©a font má»›i down vá»*/
+/*End Ã„ÂÃ¡Â»â€¹nh nghÃ„Â©a font mÃ¡Â»â€ºi down vÃ¡Â»Â*/
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -200,6 +200,7 @@ z-index: 9;
 }
 .slide-one {background-image: url(../img/slide-1.jpg)}
 .slide-two {background-image: url(../img/slide-2.jpg)}
+
 .slide-three {background-image: url(../img/slide-3.jpg)}
 .slide-text {color: #fff;font-size: 18px;font-weight: 200}
 .slide-text h2 {
@@ -666,6 +667,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 }
 .product-main-img {
     margin-bottom: 20px;
+    border: 1px solid #dddddd;
 }
 .product-gallery {
     margin-bottom: 25px;

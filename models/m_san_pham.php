@@ -35,10 +35,14 @@ class M_san_pham extends database
 		return $this->loadAllRows($parram);	
 	}
 	
-	public function Doc_san_pham_theo_ma_loai($ma_loai)
+	public function Doc_san_pham_theo_ma_loai($ma_loai,$ngoai_tru=-1)
 	{
 		$sql="SELECT * FROM san_pham ";
 		$sql.="WHERE ma_loai=?";
+		if($ngoai_tru>0)
+		{
+			$sql.=" AND ma_san_pham<>$ngoai_tru";	
+		}
 		$this->setQuery($sql);
 		$parram=array($ma_loai);
 		
