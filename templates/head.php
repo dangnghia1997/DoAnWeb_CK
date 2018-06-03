@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eElectronics - HTML eCommerce Template</title>
+    <title>eFood Supplements</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -36,14 +36,15 @@
     
     <!-- Main Script -->
     <script src="public/layout/js/main.js"></script>
-    
-   
+    <script src="public/layout/js/jquery.js"></script>
+   	
   
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="public/layout/css/owl.carousel.css">
     <link rel="stylesheet" href="public/layout/css/style.css">
     <link rel="stylesheet" href="public/layout/css/responsive.css">
+    <link rel="stylesheet" href="public/layout/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

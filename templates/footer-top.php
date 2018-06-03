@@ -1,3 +1,4 @@
+<a href="#" class="scrollToTop"><i class="fa fa-chevron-up"></i></a>
 <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
