@@ -1,5 +1,4 @@
 <?php
-include("controllers/c_lien_he.php");
-$c_lien_he=new C_lien_he();
-$c_lien_he->Hien_thi_lien_he();
+$view="views/lien_he/v_lien_he.php";
+include("templates/layout.php");
 ?>
