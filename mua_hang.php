@@ -1,10 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+<?php
+session_start();
+include("controllers/c_gio_hang.php");
+$c_gio_hang=new C_gio_hang();
+$ma_san_pham=$_POST["id"];
+$soluong=$_POST["soluong"];
+$dongia=$_POST["dongia"];
 
-<body>
-</body>
-</html>
+$c_gio_hang->Them_gio_hang($ma_san_pham,$dongia,$soluong);
+
+$arrGioHang=array('sl'=>$c_gio_hang->GetSoLuong(),'tt'=>number_format($c_gio_hang->GetThanhTien()));
+echo json_encode($arrGioHang);
+?>

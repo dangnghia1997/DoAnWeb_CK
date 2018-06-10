@@ -48,6 +48,15 @@ class M_san_pham extends database
 		
 		return $this->loadAllRows($parram);	
 	}	
+	
+	public function LayThongTinSanPhamChoGioHang($chuoi)
+	{
+		$sql="SELECT * FROM san_pham ";
+		$sql.="WHERE ma_san_pham in($chuoi)";
+		$this->setQuery($sql);
+		
+		return $this->loadAllRows();	
+	}
 }
 
 /*$M_san_pham=new M_san_pham();

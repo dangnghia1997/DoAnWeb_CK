@@ -1,3 +1,4 @@
+
 <form method="post" action="#">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
@@ -11,35 +12,43 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                    foreach($ds_tt_gio_hang as $gh)
+									{
+									?>
                                         <tr class="cart_item">
                                             <td class="product-remove">
                                                 <a title="Remove this item" class="remove" href="#">×</a> 
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="public/layout/img/product-thumb-2.jpg"></a>
+                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="public/layout/images/<?php echo $gh->hinh;?>"></a>
                                             </td>
 
                                             <td class="product-name">
-                                                <a href="single-product.html">Ship Your Idea</a> 
+                                                <a href="chi_tiet_san_pham.php?ma_san_pham=<?php echo $gh->ma_san_pham;?>"><?php echo $gh->ten_san_pham;?></a> 
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount"><?php echo number_format($gh->don_gia);?></span> 
+                                                <input type="hidden" name="dongia<?php echo $gh->ma_san_pham;?>" value="<?php echo $gh->don_gia;?>" />
                                             </td>
 
                                             <td class="product-quantity">
                                                 <div class="quantity buttons_added">
                                                     <!--<input type="button" class="minus" value="-">-->
-                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="<?php echo $gh->soluong;?>" min="1" step="1" name="soluong<?php echo $gh->ma_san_pham;?>">
                                                     <!--<input type="button" class="plus" value="+">-->
                                                 </div>
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount"><?php echo number_format($gh->soluong*$gh->don_gia);?></span> 
                                             </td>
                                         </tr>
+                                    <?php
+									}
+									?>   
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <!--<div class="coupon">
@@ -48,8 +57,8 @@
                                                     <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
                                                 </div>-->
                                                 <a href="san_pham.php"><i class="fa fa-reply-all"></i>Tiếp tục mua hàng</a>
-                                                <input type="submit" value="Cập nhật giở hàng" name="update_cart" class="button">
-                                                <input type="submit" value="Thanh toán" name="proceed" class="checkout-button button alt wc-forward">
+                                                <input type="submit" value="Cập nhật giở hàng" name="btn_cap_nhat" class="button">
+                                                <input type="submit" value="Thanh toán" name="btn_thanh_toan" class="checkout-button button alt wc-forward">
                                             </td>
                                         </tr>
                                     </tbody>

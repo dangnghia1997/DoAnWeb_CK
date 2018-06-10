@@ -11,7 +11,7 @@
                 
                 <div class="col-sm-4">
                     <div class="shopping-item">
-                        <a href="cart.html">Giỏ hàng - <span class="cart-amunt">0 đ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart.html">Giỏ hàng - <span class="cart-amunt"><?php echo isset($_SESSION["thanh_tien"])?$_SESSION["thanh_tien"]:0?> đ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo isset($_SESSION["so_luong"])?$_SESSION["so_luong"]:0?></span></a>
                     </div>
                 </div>
             </div>

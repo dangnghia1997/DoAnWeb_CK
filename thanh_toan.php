@@ -1,4 +1,5 @@
 <?php
+session_start();
 //models
 include("models/m_tinh_thanh.php");
 $m_tinh_thanh=new M_tinh_thanh();
