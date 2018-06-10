@@ -18,6 +18,9 @@
             </div>
         </div>
     </div>
-    
+   
+   
+
   </body>
 </html>
+<script src="public/layout/js/ajax.js"></script>

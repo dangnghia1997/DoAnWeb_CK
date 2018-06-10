@@ -37,8 +37,9 @@
     <!-- Main Script -->
     <script src="public/layout/js/main.js"></script>
     <script src="public/layout/js/jquery.js"></script>
-   	
-  
+    
+   	<script src="public/layout/js/ajax_gio_hang.js"></script>
+  	
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="public/layout/css/owl.carousel.css">

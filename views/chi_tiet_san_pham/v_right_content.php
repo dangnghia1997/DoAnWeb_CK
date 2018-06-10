@@ -23,9 +23,11 @@
                                     
                                     <form action="" class="cart">
                                         <div class="quantity">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1" id="soluong<?php echo $san_pham->ma_san_pham;?>">
+                                            <input type="hidden" id="dongia<?php echo $san_pham->ma_san_pham;?>" value="<?php echo $san_pham->don_gia;?>" />
                                         </div>
-                                        <button class="add_to_cart_button" type="submit">Thêm vào giỏ</button>
+                                        
+                                        <button class="add_to_cart_button" type="submit" id="<?php echo $san_pham->ma_san_pham;?>">Thêm vào giỏ</button>
                                     </form>   
                                     
                                     <div class="product-inner-category">

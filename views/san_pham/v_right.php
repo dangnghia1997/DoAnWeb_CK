@@ -17,12 +17,11 @@ foreach($ds_tat_ca_san_pham as $sanpham)
                         <div class="product-carousel-price">
                             <ins><?php echo $sanpham->don_gia?></ins>
                             <input type="hidden" id="dongia<?php echo $sanpham->ma_san_pham?>" value="<?php echo $sanpham->don_gia?>" />
-                            <input type="hidden" id="hinh<?php echo $sanpham->ma_san_pham?>" value="<?php echo $sanpham->hinh?>" />
                             <input type="hidden" id="soluong<?php echo $sanpham->ma_san_pham?>" value="1" />
                         </div>  
                         
                         <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="javascript:XL_ajax(<?php echo $sanpham->ma_san_pham?>)" onclick="window.location.reload(true)">Thêm vào giỏ</a>
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="javascript:void(0)" id="<?php echo $sanpham->ma_san_pham?>" >Thêm vào giỏ</a>
                         </div>                      
                     </div>
                 </div>  
