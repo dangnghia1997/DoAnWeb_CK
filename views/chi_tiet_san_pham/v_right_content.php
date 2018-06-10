@@ -18,7 +18,7 @@
                                 <div class="product-inner">
                                     <h2 class="product-name"><?php echo $san_pham->ten_san_pham;?></h2>
                                     <div class="product-inner-price">
-                                        <ins><?php echo $san_pham->don_gia;?></ins> 
+                                        <ins><?php echo number_format($san_pham->don_gia)." ";?>₫</ins> 
                                     </div>    
                                     
                                     <form action="" class="cart">

@@ -24,7 +24,7 @@
                                 <h2><a href="chi_tiet_san_pham.php?ma_san_pham=<?php echo $sp_HOT->ma_san_pham;?>"><?php echo $sp_HOT->ten_san_pham;?></a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins><?php echo $sp_HOT->don_gia;?></ins> 
+                                    <ins><?php echo number_format($sp_HOT->don_gia)." ";?>₫</ins> 
                                 </div> 
                             </div>
                          <?php

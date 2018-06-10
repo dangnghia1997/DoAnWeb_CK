@@ -34,7 +34,7 @@ if(isset($ds_tt_gio_hang))
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount"><?php echo number_format($gh->don_gia);?></span> 
+                                                <span class="amount"><?php echo number_format($gh->don_gia);?>₫</span> 
                                                 <input type="hidden" name="dongia<?php echo $gh->ma_san_pham;?>" value="<?php echo $gh->don_gia;?>" />
                                             </td>
 
@@ -47,7 +47,7 @@ if(isset($ds_tt_gio_hang))
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount"><?php echo number_format($gh->soluong*$gh->don_gia);?></span> 
+                                                <span class="amount"><?php echo number_format($gh->soluong*$gh->don_gia);?>₫</span> 
                                             </td>
                                         </tr>
                                     <?php

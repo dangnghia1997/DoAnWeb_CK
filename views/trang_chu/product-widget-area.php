@@ -21,7 +21,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $sp_ban_chay->don_gia?></ins>
+                                <ins><?php echo number_format($sp_ban_chay->don_gia)." "?>₫</ins>
                             </div>                            
                         </div>
                         <?php
@@ -48,7 +48,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $sp_gan_day->don_gia;?></ins>
+                                <ins><?php echo number_format($sp_gan_day->don_gia)." ";?>₫</ins>
                             </div>                            
                         </div>
                         <?php
@@ -75,7 +75,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins><?php echo $sp_moi->don_gia;?></ins> 
+                                <ins><?php echo number_format($sp_moi->don_gia)." ";?>₫</ins> 
                             </div>                            
                         </div>
                         <?php
