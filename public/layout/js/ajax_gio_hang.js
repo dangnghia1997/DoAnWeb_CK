@@ -22,8 +22,8 @@ $(document).ready(function() {
 			dataType:'json',
 			success: function(data)
 			{
-				alert("Số lượng: "+data['sl']+"\n Thành tiền: "+data['tt']);
-				$('span.cart-amunt').html(data['tt']); // thay đổi thành tiền ở ô giỏ hàng
+				//alert("Số lượng: "+data['sl']+"\n Thành tiền: "+data['tt']);
+				$('span.cart-amunt').html(data['tt']+"₫"); // thay đổi thành tiền ở ô giỏ hàng
 				$('span.product-count').html(data['sl']);	 //thay đổi số lượng ở ô giỏ hàng
 			},
 			error:function(error)

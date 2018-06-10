@@ -5,10 +5,11 @@ class C_gio_hang
 	public function Hien_thi_gio_hang()
 	{
 		//models
-
 		$gio_hang=$this->Lay_gio_hang();
-		
+		if($gio_hang)
+		{
 		$ds_tt_gio_hang=$this->Lay_thong_tin_gio_hang($gio_hang);
+		}
 		
 		//echo "<pre>";
 		//print_r($ds_tt_gio_hang);
@@ -79,7 +80,7 @@ class C_gio_hang
 			$_SESSION["so_luong"]-=$_SESSION["gio_hang"][$ma_san_pham];
 			$_SESSION["so_luong"]+=$so_luong;
 			
-			
+			$_SESSION["gio_hang"][$ma_san_pham]=$so_luong;
 		}	
 	}
 	
@@ -114,5 +115,40 @@ class C_gio_hang
 		else
 			return false;	
 	}	
+	
+	public function Xoa_Mat_Hang($ma_san_pham,$don_gia)
+	{
+		$gio_hang=$this->GetGioHang();
+		$gio_hang_Moi=array();
+		foreach($gio_hang as $k=>$v)
+		{
+			if($ma_san_pham != $k)
+			{
+				$gio_hang_Moi[$k]=$v;
+			}
+			else
+			{
+				$_SESSION["thanh_tien"]-=$gio_hang[$ma_san_pham]*$don_gia;
+				$_SESSION["so_luong"]-=$gio_hang[$ma_san_pham];	
+			}	
+		}
+		
+		if(!empty($gio_hang_Moi))
+		{
+			$_SESSION["gio_hang"]=$gio_hang_Moi;
+		}
+		else
+		{
+			//xóa giỏ hàng
+			$this->Xoa_gio_hang();	
+		}
+	}
+	
+	public function Xoa_gio_hang()
+	{
+		unset($_SESSION["gio_hang"]);
+		unset($_SESSION["thanh_tien"]);
+		unset($_SESSION["so_luong"]);
+	}
 }
 ?>

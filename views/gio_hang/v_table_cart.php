@@ -1,4 +1,8 @@
-
+<?php
+if(isset($ds_tt_gio_hang))
+{
+	//Nếu có sản phẩm trong giỏ hàng
+?>
 <form method="post" action="#">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
@@ -18,7 +22,7 @@
 									?>
                                         <tr class="cart_item">
                                             <td class="product-remove">
-                                                <a title="Remove this item" class="remove" href="#">×</a> 
+                                                <a title="Remove this item" class="remove" href="javascript:XL_ajax_xoa_mat_hang(<?php echo $gh->ma_san_pham?>,<?php echo $gh->don_gia?>)">×</a> 
                                             </td>
 
                                             <td class="product-thumbnail">
@@ -64,3 +68,17 @@
                                     </tbody>
                                 </table>
                             </form>
+<?php
+}
+else
+{
+	//Khi không có sản phẩm trong giỏ hàng hiện thông báo
+?>
+<div class="container" style="text-align:center">
+<h1>Không có sản phẩm nào trong giỏ hàng!</h1>
+<a href="san_pham.php"><i class="fa fa-reply-all"></i>Tiếp tục mua hàng</a>
+</div>
+
+<?php
+}
+?>
