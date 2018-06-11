@@ -1,4 +1,4 @@
-<div class="col-md-4">3
+<div class="col-md-4">
         <div class="product-content-right">
           <div class="woocommerce">
             <!--<div class="woocommerce-info">Returning customer? <a class="showlogin" data-toggle="collapse" href="#login-form-wrap" aria-expanded="false" aria-controls="login-form-wrap">Click here to login</a> </div>

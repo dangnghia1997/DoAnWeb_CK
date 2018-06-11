@@ -3,7 +3,7 @@ if(isset($ds_tt_gio_hang))
 {
 	//Nếu có sản phẩm trong giỏ hàng
 ?>
-<form method="post" action="#">
+<form method="post">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
                                         <tr>

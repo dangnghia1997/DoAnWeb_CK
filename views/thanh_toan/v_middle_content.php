@@ -1,4 +1,4 @@
-<div class="col-md-4">2
+<div class="col-md-4">
       <div id="payment">
     <ul class="payment_methods methods">
       <li class="payment_method_bacs">

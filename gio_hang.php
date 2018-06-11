@@ -3,6 +3,11 @@ session_start();
 include("controllers/c_gio_hang.php");
 $c_gio_hang=new C_gio_hang();
 
+if(isset($_POST["btn_thanh_toan"]))
+{
+	header("location:thanh_toan.php");	
+}
+
 if(isset($_POST["btn_cap_nhat"]))
 {
 	$gio_hang=$c_gio_hang->GetGioHang();

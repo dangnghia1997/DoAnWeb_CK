@@ -1,9 +1,9 @@
-/*Ã„ÂÃ¡Â»â€¹nh nghÃ„Â©a font mÃ¡Â»â€ºi down vÃ¡Â»Â*/
+/*Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh nghÃƒâ€žÃ‚Â©a font mÃƒÂ¡Ã‚Â»Ã¢â‚¬Âºi down vÃƒÂ¡Ã‚Â»Ã‚Â*/
 @font-face{
 	font-family:'Roboto';
 	src:url(../fonts/Roboto-Regular.ttf);
 }
-/*End Ã„ÂÃ¡Â»â€¹nh nghÃ„Â©a font mÃ¡Â»â€ºi down vÃ¡Â»Â*/
+/*End Ãƒâ€žÃ‚ÂÃƒÂ¡Ã‚Â»Ã¢â‚¬Â¹nh nghÃƒâ€žÃ‚Â©a font mÃƒÂ¡Ã‚Â»Ã¢â‚¬Âºi down vÃƒÂ¡Ã‚Â»Ã‚Â*/
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -1110,3 +1110,13 @@ ul.menu-left li{
 	color:#fff;
 }
 /*END Scroll to TOP button */
+
+
+
+
+ul.dia_chi li span {font-size: 20px;margin-left: 20px;}
+ul.dia_chi li i {font-size:200%;}
+ul.dia_chi {
+    list-style: none;
+    padding:0;
+}
