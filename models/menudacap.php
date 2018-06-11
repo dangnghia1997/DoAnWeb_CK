@@ -1,8 +1,6 @@
 <?php
-
 function inMenu($mang,$id_cha=NULL)
 {
-	$i=0;
 	foreach($mang as $k=>$m)
 	{
 		
@@ -33,5 +31,34 @@ function hasChild($mang,$id_cha)
 		}
 	}	
 }
+
+function Lay_mang_ma_san_pham_theo_ma_loai($arr_ma_loai_cha,$ma_loai)
+{
+	$mang=array();
+	include_once("models/m_loai_san_pham.php");
+	$m_loai_san_pham=new M_loai_san_pham();
+	$arr_ma_loai=$m_loai_san_pham->Doc_loai_san_pham_theo_ma_loai_cha($ma_loai);
+	foreach($arr_ma_loai as $item)
+	{
+		if(in_array($item->ma_loai,$arr_ma_loai_cha))
+		{
+			$arr=Lay_mang_ma_san_pham_theo_ma_loai($arr_ma_loai_cha,$item->ma_loai);
+			foreach($arr as $k)
+			{
+				$mang[]=$k;
+			}	
+		}
+		else
+		{
+			$mang[]=$item->ma_loai;	
+		}
+	}
+	
+	return $mang;
+
+}
+
+
+
 
 ?>
