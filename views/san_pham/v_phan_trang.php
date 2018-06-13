@@ -1,7 +1,7 @@
 <div class="row">
                 <div class="col-md-12">
                     <div class="product-pagination text-center">
-                        <nav>
+                        <!--<nav>
                           <ul class="pagination">
                             <li>
                               <a href="#" aria-label="Previous">
@@ -19,7 +19,9 @@
                               </a>
                             </li>
                           </ul>
-                        </nav>                        
+                        </nav> -->
+                        <?php echo $phan_trang?>                      
                     </div>
                 </div>
-            </div>
+                
+</div>
