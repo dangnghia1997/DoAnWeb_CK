@@ -25,12 +25,12 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
+                                           <!-- <div class="slide-content">
                                                 <h2>We are awesome</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>
                                                 <a href="" class="readmore">Learn more</a>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -46,11 +46,11 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
+                                            <!--<div class="slide-content">
                                                 <h2>We are great</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, dolorum harum molestias tempora deserunt voluptas possimus quos eveniet, vitae voluptatem accusantium atque deleniti inventore. Enim quam placeat expedita! Quibusdam!</p>
                                                 <a href="" class="readmore">Learn more</a>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -66,12 +66,12 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-6">
-                                            <div class="slide-content">
+                                           <!-- <div class="slide-content">
                                                 <h2>We are superb</h2>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
                                                 <a href="" class="readmore">Learn more</a>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
