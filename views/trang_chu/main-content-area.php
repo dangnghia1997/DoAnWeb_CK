@@ -1,5 +1,5 @@
 <div class="maincontent-area">
-        <div class="zigzag-bottom"></div>
+       
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

@@ -1,5 +1,4 @@
 <div class="slider-area">
-        <div class="zigzag-bottom"></div>
         <div id="slide-list" class="carousel carousel-fade slide" data-ride="carousel">
             
             <div class="slide-bulletz">
