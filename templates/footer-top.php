@@ -25,7 +25,7 @@
                             <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                             <li><a href="#">Chính sách đổi trả</a></li>
                             <li><a href="lien_he.php">Liên hệ</a></li>
-                            
+                            <li><a href="kien_thuc_the_hinh.php">Kiến thức thể hình</a></li>
                         </ul>                        
                     </div>
                 </div>

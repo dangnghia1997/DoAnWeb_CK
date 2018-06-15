@@ -20,7 +20,7 @@
                             </li>
                           </ul>
                         </nav> -->
-                        <?php echo $phan_trang?>                      
+                        <?php echo $phan_trang;?> 
                     </div>
                 </div>
                 

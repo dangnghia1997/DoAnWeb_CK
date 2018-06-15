@@ -2,11 +2,14 @@
 <?php
 if(isset($_POST["btnTim"]))
 {
+	if($gia_tri_tim!="")
+	{
 ?>
 <h1>Tìm Kiếm</h1>
 <p>Kết quả tìm kiếm cho "<b><?php echo $gia_tri_tim;?></b>"</p>
 
 <?php
+	}
 }
 ?>
 

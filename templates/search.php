@@ -3,7 +3,7 @@
                     <br />
                     <br />
                 	<div class="ui-widget">
-                        <form action="" method="post">
+                        <form action="san_pham.php?page=1" method="post">
                             <input type="text" id="search" name="search" placeholder="Tìm kiếm...">
                             <input type="submit" value="Tìm kiếm" name="btnTim">
                         </form>
