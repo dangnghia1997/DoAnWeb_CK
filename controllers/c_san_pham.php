@@ -125,11 +125,23 @@ class C_san_pham
 		
 		
 		
+		/*******************SEARCH*************************************************/
+		$mang_chua_ten_san_pham=array();
+		$ds_san_pham=$m_san_pham->Doc_tat_ca_san_pham();
+		foreach($ds_san_pham as $sp)
+		{
+			$mang_chua_ten_san_pham[]=$sp->ten_san_pham;
+		}
 		
+		if(isset($_POST["btnTim"]))
+		{
+			$gia_tri_tim=$_POST["search"];
+			$ds_kq_tim=$m_san_pham->Tim_san_pham($gia_tri_tim);
+			$ds_tat_ca_san_pham=$ds_kq_tim;	
+		}
+		/******************END-SEARCH***************************************************/
 		
-		
-		
-		
+	
 		//views
 		$view="views/san_pham/v_san_pham.php";
 		include("templates/layout.php");	

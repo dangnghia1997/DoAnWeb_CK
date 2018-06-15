@@ -63,6 +63,15 @@ class M_san_pham extends database
 		
 		return $this->loadAllRows();	
 	}
+	
+	
+	public function Tim_san_pham($gia_tri_tim)
+	{
+		$sql="SELECT * FROM san_pham WHERE ten_san_pham like '%$gia_tri_tim%'";
+		$this->setQuery($sql);
+		
+		return $this->loadAllRows();	
+	}
 }
 
 /*$M_san_pham=new M_san_pham();

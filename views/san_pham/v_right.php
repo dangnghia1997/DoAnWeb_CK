@@ -1,5 +1,14 @@
 <div class="col-md-9">
+<?php
+if(isset($_POST["btnTim"]))
+{
+?>
+<h1>Tìm Kiếm</h1>
+<p>Kết quả tìm kiếm cho "<b><?php echo $gia_tri_tim;?></b>"</p>
 
+<?php
+}
+?>
 
 <?php
 foreach($ds_tat_ca_san_pham as $sanpham)
@@ -15,7 +24,7 @@ foreach($ds_tat_ca_san_pham as $sanpham)
                         </div>
                         <h2><a href="chi_tiet_san_pham.php?ma_san_pham=<?php echo $sanpham->ma_san_pham;?>" title="<?php echo $sanpham->ten_san_pham; ?>" id="tensp<?php echo $sanpham->ma_san_pham?>"><?php echo $sanpham->ten_san_pham; ?></a></h2>
                         <div class="product-carousel-price">
-                            <ins><?php echo $sanpham->don_gia?></ins>
+                            <ins><?php echo number_format($sanpham->don_gia)." "?>₫</ins>
                             <input type="hidden" id="dongia<?php echo $sanpham->ma_san_pham?>" value="<?php echo $sanpham->don_gia?>" />
                             <input type="hidden" id="soluong<?php echo $sanpham->ma_san_pham?>" value="1" />
                         </div>  

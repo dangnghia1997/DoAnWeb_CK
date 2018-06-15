@@ -39,14 +39,16 @@
     <script src="public/layout/js/jquery.js"></script>
     
    	<script src="public/layout/js/ajax_gio_hang.js"></script>
-  	
+  	<script src="public/layout/js/jquery-ui.js"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="public/layout/css/owl.carousel.css">
     <link rel="stylesheet" href="public/layout/css/style.css">
     <link rel="stylesheet" href="public/layout/css/responsive.css">
     <link rel="stylesheet" href="public/layout/css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="public/layout/css/jquery-ui.css">
+    
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
