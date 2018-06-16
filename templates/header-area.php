@@ -15,7 +15,7 @@
 							<li>
                                 <ul class="list-unstyled list-inline">
                                         <li class="dropdown dropdown-small">
-                                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><i class="fa fa-user"></i> <?php echo "Chào,".$_SESSION["username"]?></a>
+                                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#" id="hien_thi_tai_khoan"><i class="fa fa-user"></i> <?php echo "Chào,".$_SESSION["username"]?></a>
                                             <ul class="dropdown-menu">
                                                 <li><a data-toggle="modal" data-target="#myDoiMatKhau">Đổi mật khẩu</a></li>
                                                 <li><a href="javascript:var r=confirm('Bạn muốn đăng xuất?');if(r==true) window.location='dang_xuat.php'">Đăng Xuất</a></li>

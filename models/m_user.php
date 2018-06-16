@@ -22,6 +22,16 @@ class M_user
 			
 	}
 	
+	public function Doc_user_theo_id($id)
+	{
+		$sql="SELECT * FROM user ";
+		$sql.="WHERE id='$id'";
+		$result = mysqli_query($this->conn,$sql);
+		
+		return mysqli_fetch_all($result,MYSQLI_ASSOC);
+			
+	}
+	
 
 	public function Check_tai_khoan($email,$password)
 	{
@@ -40,6 +50,18 @@ class M_user
         $result=mysqli_query($this->conn,$sql);
 		if($result) return 1;
 		else return 0;
+	}
+	
+	
+	public function Cap_nhat_user($id,$password_moi)
+	{
+		$sql="UPDATE user SET password='$password_moi' ";
+		$sql.="WHERE id='$id'";
+		$result = mysqli_query($this->conn,$sql);
+		
+		if($result) return 1;
+		else return 0;
+			
 	}
 }
 ?>
