@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 10, 2018 at 09:26 AM
+-- Generation Time: Jun 16, 2018 at 03:38 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -1078,8 +1078,19 @@ CREATE TABLE IF NOT EXISTS `user` (
   `so_dien_thoai` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `dia_chi` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `quyen` tinyint(3) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`, `ten_day_du`, `so_dien_thoai`, `dia_chi`, `quyen`) VALUES
+(5, 'dangnghia25197@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Đặng Nghĩa', '01224588770', '1/6 Mễ cốc phường 15 quận 08', 0),
+(11, 'haolh@gmail.com', '111', 'Lý Hiền Hạo', '0990909090', '2/6 Mễ cốc phường 15 quận 08', 0),
+(13, 'tuantrinh@gmai.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trịnh Minh Tuấn', '01222222222', '111 Phạm Thê hiển p4 q8', 0),
+(17, 'a@gmail.com', '202cb962ac59075b964b07152d234b70', 'aaaaa', '0101010101', '123 uu long p11 q8', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
