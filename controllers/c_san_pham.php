@@ -128,10 +128,15 @@ class C_san_pham
 		/*******************SEARCH*************************************************/
 		$mang_chua_ten_san_pham=array();
 		$ds_san_pham=$m_san_pham->Doc_tat_ca_san_pham();
+		
+		
 		foreach($ds_san_pham as $sp)
 		{
 			$mang_chua_ten_san_pham[]=$sp->ten_san_pham;
 		}
+		
+		
+		
 		
 		if(isset($_POST["btnTim"]))
 		{

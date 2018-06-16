@@ -21,4 +21,9 @@ $(document).ready(function(){
 
 });
 //end scroll to top button
- 
+
+
+/***ĐĂNG KÍ -ĐĂNG NHẬP *****/
+
+
+/**END ĐĂNG KÍ- ĐĂNg NHẬP *****************/

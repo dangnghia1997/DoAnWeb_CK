@@ -19,7 +19,6 @@ class C_lien_he
 
 }
 		
-		
 		//views
 		
 			$view="views/lien_he/v_lien_he.php";
