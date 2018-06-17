@@ -1139,3 +1139,16 @@ ul.dia_chi {
 /**** CSS ĐĂNG KÍ- ĐĂNG NHẬP**/
 
 /** END -CSS ĐĂNG KÍ - ĐĂNG NHẬP***/
+/** tùy chỉnh lại bootstrap**/
+.dropdown-menu.con 
+{
+	min-width:130px;
+	text-align:center;
+}
+.dropdown-menu.con li
+{
+	display:block;
+	cursor:pointer;
+}
+
+/** tùy chỉnh lại bootstrap**/
