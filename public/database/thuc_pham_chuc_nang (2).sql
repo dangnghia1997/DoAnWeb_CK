@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 16, 2018 at 03:38 PM
+-- Generation Time: Jun 17, 2018 at 04:47 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -47,6 +47,8 @@ CREATE TABLE IF NOT EXISTS `don_hang` (
   `ma_don_hang` int(11) NOT NULL AUTO_INCREMENT,
   `ma_khach_hang` int(11) NOT NULL,
   `ngay_dat` date NOT NULL,
+  `hinh_thuc_thanh_toan` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `tong_tien` double NOT NULL,
   PRIMARY KEY (`ma_don_hang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Đơn hàng';
 
@@ -65,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `khach_hang` (
   `so_dien_thoai` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
   `ghi_chu` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `trang_thai` tinyint(3) NOT NULL DEFAULT '0',
+  `thanh_vien` tinyint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ma_khach_hang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Khách hàng';
 
@@ -105,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `loai_san_pham` (
   `ma_loai_cha` int(11) DEFAULT NULL,
   `ten_loai` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ma_loai`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Loại sản phẩm';
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Loại sản phẩm';
 
 --
 -- Dumping data for table `loai_san_pham`
@@ -1080,7 +1083,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `quyen` tinyint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
 
 --
 -- Dumping data for table `user`
@@ -1090,7 +1093,9 @@ INSERT INTO `user` (`id`, `email`, `password`, `ten_day_du`, `so_dien_thoai`, `d
 (5, 'dangnghia25197@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Đặng Nghĩa', '01224588770', '1/6 Mễ cốc phường 15 quận 08', 0),
 (11, 'haolh@gmail.com', '111', 'Lý Hiền Hạo', '0990909090', '2/6 Mễ cốc phường 15 quận 08', 0),
 (13, 'tuantrinh@gmai.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trịnh Minh Tuấn', '01222222222', '111 Phạm Thê hiển p4 q8', 0),
-(17, 'a@gmail.com', '202cb962ac59075b964b07152d234b70', 'aaaaa', '0101010101', '123 uu long p11 q8', 0);
+(17, 'a@gmail.com', '202cb962ac59075b964b07152d234b70', 'aaaaa', '0101010101', '123 uu long p11 q8', 0),
+(18, 'thanhdang564@yahoo.com.vn', 'e10adc3949ba59abbe56e057f20f883e', 'Đặng Thành', '0202020202', '1/6 Mễ Cốc p15 q8', 0),
+(19, 'nghiadeptrai@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nghĩa Nghĩa', '0902820854', '1/6 Mễ Cốc p15 q8', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
