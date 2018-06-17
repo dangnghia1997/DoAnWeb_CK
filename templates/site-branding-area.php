@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo">
-                        <h1><a href=".">e<span>Food Supplements</span></a></h1>
+                        <h1><a href=".">Food<span>Supp</span></a></h1>
                     </div>
                 </div>
                 
