@@ -2,7 +2,7 @@
             <br>
             <h3>Viết nhận xét</h3>
             <hr>
-            <form method="post">
+            <form method="post" action="lien_he.php">
             	<div class="form-group">
                 	<input type="text" class="form-control" placeholder="Tên của bạn" name="ten"><br>
                     <input type="email" class="form-control" placeholder="Email của bạn" name="email" ><br>
