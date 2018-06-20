@@ -17,7 +17,12 @@ class C_thanh_toan
 				$ds_tt_gio_hang=$c_gio_hang->Lay_thong_tin_gio_hang($gio_hang);
 			}
 			
-
+			echo "<pre>";
+			print_r($ds_tt_gio_hang);
+			echo "</pre>";
+			
+			include("models/m_khach_hang.php");
+			$m_khach_hang=new M_khach_hang();
 		//views
 			$view="views/thanh_toan/v_thanh_toan.php";
 			include("templates/layout.php");	
