@@ -4,7 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 </head>
+<?php
+date_default_timezone_set("Asia/Bangkok");
+echo date('Y-m-d')."<br>";
+$nam=substr(date('Y-m-d'),0,4);
+$arr=explode("-",date('Y-m-d'));
+echo $nam."<br>";
 
+echo "<pre>";
+print_r($arr);
+echo "</pre>";
+
+?>
 <body>
 </body>
 </html>

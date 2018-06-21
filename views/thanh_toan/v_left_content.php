@@ -2,31 +2,32 @@
   <div id="customer_details" class="col2-set">
     <div class="col-1">
       <div class="woocommerce-billing-fields">
+      <form method="post" action="">
         <h3>Thông tin giao hàng</h3>
         <p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
           <!--<label class="" for="billing_country">Country <abbr title="required" class="required">*</abbr> </label>-->
         
         <p id="billing_first_name_field" class="form-row form-row-first validate-required">
           <!--<label class="" for="billing_first_name">First Name <abbr title="required" class="required">*</abbr> </label>-->
-          <input type="text" value="" placeholder="Họ và tên" id="billing_first_name" name="billing_first_name" class="input-text ">
+          <input type="text" value="" placeholder="Họ và tên" id="billing_first_name" name="ho_ten_dh" class="input-text ">
         </p>
         
         <div class="clear"></div>
         <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
           <!--<label class="" for="billing_email">Email Address <abbr title="required" class="required">*</abbr> </label>-->
-          <input type="text" value="" placeholder="Email" id="billing_email" name="billing_email" class="input-text ">
+          <input type="text" value="" placeholder="Email" id="billing_email" name="email_dh" class="input-text ">
         </p>
         <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
           <!--<label class="" for="billing_phone">Phone <abbr title="required" class="required">*</abbr> </label>-->
-          <input type="text" value="" placeholder="Số điện thoại" id="billing_phone" name="billing_phone" class="input-text ">
+          <input type="text" value="" placeholder="Số điện thoại" id="billing_phone" name="sdt_dh" class="input-text ">
         </p>
         <div class="clear"></div>
         <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
           <!--<label class="" for="billing_address_1">Address <abbr title="required" class="required">*</abbr> </label>-->
-          <input type="text" value="" placeholder="Địa chỉ" id="billing_address_1" name="billing_address_1" class="input-text ">
+          <input type="text" value="" placeholder="Địa chỉ" id="billing_address_1" name="dia_chi_dh" class="input-text ">
         </p>
         
-          <select class="country_to_state country_select" id="tinh_thanh" name="billing_country" onchange="Xl_ajax_tinh_thanh(this.value)" >
+          <select class="country_to_state country_select" id="tinh_thanh" name="tinh_thanh_dh" onchange="Xl_ajax_tinh_thanh(this.value)" >
             <option value="null" selected="">Vui lòng chọn tỉnh/thành phố.</option>
             <?php
             foreach($ds_tinh_thanh as $tinh_thanh)
@@ -39,14 +40,14 @@
           </select>
         </p>
         
-        <select class="country_to_state country_select" id="quan_huyen" name="billing_country">
+        <select class="country_to_state country_select" id="quan_huyen" name="quan_huyen_dh">
             <option value="null" selected="">----------------</option>
 
           </select>
           
          <p id="order_comments_field" class="form-row notes">
                       <!--<label class="" for="order_comments">Order Notes</label>-->
-                      <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="order_comments"></textarea>
+                      <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="ghi_chu_dh"></textarea>
                     </p> 
           
           

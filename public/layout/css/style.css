@@ -1152,3 +1152,6 @@ ul.dia_chi {
 }
 
 /** tùy chỉnh lại bootstrap**/
+p.p_thanh_toan {
+    margin-left: 22px;
+}

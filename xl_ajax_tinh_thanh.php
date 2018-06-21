@@ -18,7 +18,7 @@ $ds_quan_huyen_theo_ma_tinh=$m_quan_huyen->Doc_quan_huyen_theo_id_tinh_thanh($id
 	foreach($ds_quan_huyen_theo_ma_tinh as $qh)
 	{
 ?>
-<option value="<?php echo $qh->id_quan_huyen;?>"><?php echo $qh->ten_quan_huyen;?></option>
+<option value="<?php echo $qh->ten_quan_huyen;?>"><?php echo $qh->ten_quan_huyen;?></option>
 <?php
 	}
 
