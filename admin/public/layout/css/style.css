@@ -214,6 +214,7 @@ body a:hover{
 	.inline-font-icons-list li{padding:0 0 0 10px}
 	.inline-font-icons-list li i{margin-top:1px;margin-right:8px;font-size:12px;text-align:center}
 	.text-overflow-hidden{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
 	.text-italic{font-style:italic}
 	.text-bold{font-weight:bold}
 	label,small,.section-title{font-weight:normal}
@@ -322,6 +323,7 @@ body a:hover{
 			padding: .7em 0;
 		}
 		nav.main-menu .icon-angle-right,.icon-angle-down{display:table-cell;width:20px;vertical-align:middle;font-size:16px}
+
 		.no-touch nav.main-menu:hover,nav.main-menu.expanded{width:250px;overflow:visible}
 		.no-touch nav.main-menu:hover .nav-text,nav.main-menu.expanded .nav-text{visibility:visible}
 		nav.main-menu .label-new{display:block;position:absolute;top:10px;right:5px}
@@ -693,6 +695,7 @@ ul.w3l-msg{
     left: -75%;
 }
 ul.agile-notification {
+
     left: -156%;
 }
 ul.agile-task {
@@ -1490,13 +1493,13 @@ code {
 }
 .btn-danger {
     color: #fff;
-    background-color: #fcb216;
+    background-color: #da0d0ddb;
     border-color: #fcb216;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
     color: #fff;
-    background-color: #2d2d2d;
-    border-color: #2d2d2d;
+    background-color: #b5bd14;
+    border-color: #b5bd14;
 }
 .btn-xs, .btn-group-xs > .btn {
     padding: 3px 8px;
@@ -1811,6 +1814,7 @@ ul.bt-list li a {
   position: absolute;
   right: 1em;
   padding: 0 1px;
+
   font-family: FontAwesome;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -3062,6 +3066,7 @@ ul.bt-list li a {
   }
 
   60% {
+
     -webkit-transform: translateX(-2px) rotate(-1deg);
     transform: translateX(-2px) rotate(-1deg);
   }
@@ -3322,8 +3327,8 @@ code {
   border-color:rgb(3, 197, 135);
 }
 .btn-success:hover{
-  border-color:#E74225 !important;
-  background:#E74225 !important;
+  border-color: #163dda !important;
+  background: #163dda !important;
 }
 .control2{
   height:200px;
