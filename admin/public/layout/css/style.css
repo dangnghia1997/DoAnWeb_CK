@@ -215,6 +215,7 @@ body a:hover{
 	.inline-font-icons-list li i{margin-top:1px;margin-right:8px;font-size:12px;text-align:center}
 	.text-overflow-hidden{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
+
 	.text-italic{font-style:italic}
 	.text-bold{font-weight:bold}
 	label,small,.section-title{font-weight:normal}
@@ -3417,9 +3418,9 @@ button.note-color-btn {
     background-color: #fcb216;
     color: #fff;
     border: solid 2px #fcb216;
-    padding: .5em 1.5em;
+    /* padding: .5em 1.5em; */
     outline: none;
-    border-radius: inherit;
+    border-radius: 16px;
     transition: 0.5s all ease;
     -webkit-transition: 0.5s all ease;
     -moz-transition: 0.5s all ease;
