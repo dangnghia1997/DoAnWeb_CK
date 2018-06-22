@@ -8,30 +8,30 @@
 <nav class="main-menu">
 		<ul>
 			<li>
-				<a href="index.html">
+				<a href="index_quan_tri.php">
 					<i class="fa fa-home nav_icon"></i>
 					<span class="nav-text">
-					Dashboard
+					Trang Chủ
 					</span>
 				</a>
 			</li>
 			<li class="has-subnav">
 				<a href="javascript:;">
-				<i class="fa fa-cogs" aria-hidden="true"></i>
+				<i class="fa fa-users" aria-hidden="true"></i>
 				<span class="nav-text">
-					UI Components
+					User
 				</span>
 				<i class="icon-angle-right"></i><i class="icon-angle-down"></i>
 				</a>
 				<ul>
 					<li>
-					<a class="subnav-text" href="buttons.html">
-					Buttons
+					<a class="subnav-text" href="ds_users.php">
+						<i class="fa fa-list-alt"></i> Danh sách user
 					</a>
 					</li>
 					<li>
-					<a class="subnav-text" href="grids.html">
-					Grids
+					<a class="subnav-text" href="them_users.php">
+						<i class="fa fa-plus"></i> Thêm user
 					</a>
 					</li>
 				</ul>
@@ -40,69 +40,81 @@
 				<a href="javascript:;">
 				<i class="fa fa-check-square-o nav_icon"></i>
 				<span class="nav-text">
-				Forms
+				Loại sản phẩm
 				</span>
 				<i class="icon-angle-right"></i><i class="icon-angle-down"></i>
 				</a>
 				<ul>
 					<li>
-						<a class="subnav-text" href="inputs.html">Inputs</a>
+						<a class="subnav-text" href="ds_loai_san_pham.php">
+                        <i class="fa fa-list-alt"></i> Danh sách Loại sản phẩm
+                        </a>
 					</li>
 					<li>
-						<a class="subnav-text" href="validation.html">Form Validation</a>
+						<a class="subnav-text" href="them_loai_san_pham.php">
+                        	<i class="fa fa-plus"></i> Thêm Lọai sản phẩm
+                        </a>
 					</li>
 				</ul>
 			</li>
 			<li class="has-subnav">
 				<a href="javascript:;">
 					<i class="fa fa-file-text-o nav_icon"></i>
-						<span class="nav-text">Pages</span>
+						<span class="nav-text">Nhà cung cấp</span>
 					<i class="icon-angle-right"></i><i class="icon-angle-down"></i>
 				</a>
 				<ul>
 					<li>
-						<a class="subnav-text" href="gallery.html">
-							Image Gallery
+						<a class="subnav-text" href="ds_nha_cung_cap.php">
+							<i class="fa fa-list-alt"></i> Danh sách Nhà cung cấp
 						</a>
 					</li>
 					<li>
-						<a class="subnav-text" href="calendar.html">
-							Calendar
+						<a class="subnav-text" href="them_nha_cung_cap.php">
+							<i class="fa fa-plus"></i> Thêm Nhà cung cấp
+						</a>
+					</li>
+					
+				</ul>
+			</li>
+            <li>
+				<a href="tables.html">
+					<i class="icon-table nav-icon"></i>
+					<span class="nav-text">
+					Sản phẩm
+					</span>
+                    <i class="icon-angle-right"></i><i class="icon-angle-down"></i>
+				</a>
+                <ul>
+					<li>
+						<a class="subnav-text" href="ds_san_pham.php">
+							<i class="fa fa-list-alt"></i> Danh sách Sản phẩm
 						</a>
 					</li>
 					<li>
-						<a class="subnav-text" href="signup.html">
-							Sign Up Page
+						<a class="subnav-text" href="them_san_pham.php">
+							<i class="fa fa-plus"></i> Thêm Sản phẩm
 						</a>
 					</li>
-					<li>
-						<a class="subnav-text" href="login.html">
-							Login Page
-						</a>
-					</li>
+					
 				</ul>
 			</li>
 			<li>
 				<a href="charts.html">
 					<i class="fa fa-bar-chart nav_icon"></i>
 					<span class="nav-text">
-						Charts
+						Thống kê
 					</span>
 				</a>
 			</li>
-			<li>
+            
+            
+            
+			<!--<li>
 				<a href="typography.html">
 					<i class="icon-font nav-icon"></i>
 					<span class="nav-text">
 					Typography
-					</span>
-				</a>
-			</li>
-			<li>
-				<a href="tables.html">
-					<i class="icon-table nav-icon"></i>
-					<span class="nav-text">
-					Tables
 					</span>
 				</a>
 			</li>
@@ -136,7 +148,7 @@
 						<a class="subnav-text" href="blank.html">Blank Page</a>
 					</li>
 				</ul>
-			</li>
+			</li>-->
 		</ul>
 		<ul class="logout">
 			<li>
