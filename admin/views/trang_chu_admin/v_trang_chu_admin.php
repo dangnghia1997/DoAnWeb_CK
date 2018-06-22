@@ -290,7 +290,7 @@
 								<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
 							</ul>
 							<div class="clearfix"> </div>
-							<script type="text/javascript" src="../public/layout/js/jquery.countdown.min.js"></script>
+							<script type="text/javascript" src="public/layout/js/jquery.countdown.min.js"></script>
 							<script type="text/javascript">
 								$('#example').countdown({
 									date: '12/24/2020 18:59:59',
