@@ -99,6 +99,14 @@
 					
 				</ul>
 			</li>
+            <li>
+				<a href="ds_khach_hang.php">
+					<i class="fa fa-money"></i>
+					<span class="nav-text">
+						Danh sách khách hàng
+					</span>
+				</a>
+			</li>
 			<li>
 				<a href="charts.html">
 					<i class="fa fa-bar-chart nav_icon"></i>
