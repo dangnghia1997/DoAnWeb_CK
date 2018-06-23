@@ -24,7 +24,7 @@
                             <th>Số Điện Thoại</th>
                             <th>Ghi Chú</th>
 							<th>Trạng Thái</th>
-							<th>Thành Viên</th>
+							<th>Quyền</th>
 							
 						  </tr>
 						</thead>

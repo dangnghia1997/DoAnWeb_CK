@@ -107,6 +107,14 @@
 					</span>
 				</a>
 			</li>
+            <li>
+				<a href="ds_don_hang.php">
+					<i class="fa fa-book"></i>
+					<span class="nav-text">
+						Danh sách đơn hàng
+					</span>
+				</a>
+			</li>
 			<li>
 				<a href="charts.html">
 					<i class="fa fa-bar-chart nav_icon"></i>
