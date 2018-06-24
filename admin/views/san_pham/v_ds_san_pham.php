@@ -39,7 +39,9 @@
 							<td><?php echo $sp->ma_loai?></td>
 							<td><?php echo $sp->ma_nha_cung_cap?></td>
                             <td><?php echo $sp->ten_san_pham?></td>
-							<td><?php echo $sp->hinh?></td>
+							<td>
+							<img class="hinh_san_pham" src="../public/layout/images/<?php echo $sp->hinh?>" alt="hinhsanpham">
+                            </td>
 							<td><?php echo number_format($sp->don_gia)?></td>
                             <td><?php echo $sp->mo_ta?></td>
 							<td>

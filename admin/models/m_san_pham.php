@@ -63,5 +63,33 @@ class M_san_pham extends database
 		
 		return $this->loadAllRows();	
 	}
+	
+	public function Them_san_pham($ma_loai,$ma_nha_cung_cap,$ten_san_pham,$hinh,$don_gia,$mo_ta)
+	{
+		$sql="INSERT INTO san_pham ";
+		$sql.="VALUES(?,?,?,?,?,?,?)";
+		$this->setQuery($sql);
+		$parram=array(NULL,$ma_loai,$ma_nha_cung_cap,$ten_san_pham,$hinh,$don_gia,$mo_ta);
+		$kq=$this->execute($parram);
+		return $kq->rowCount();
+	}
+	
+	public function Cap_nhat_san_pham($ma_san_pham,$ma_loai,$ma_nha_cung_cap,$ten_san_pham,$hinh,$don_gia,$mo_ta)
+	{
+		$sql="UPDATE san_pham SET ma_loai=?,ma_nha_cung_cap=?,ten_san_pham=?,hinh=?,don_gia=?,mo_ta=? ";
+		$sql.="WHERE ma_san_pham=?";
+		$this->setQuery($sql);
+		$parram=array($ma_loai,$ma_nha_cung_cap,$ten_san_pham,$hinh,$don_gia,$mo_ta,$ma_san_pham);
+		$kq=$this->execute($parram);
+		return $kq->rowCount();	
+	}
+	
+	public function Xoa_san_pham($ma_san_pham)
+	{
+		$sql="DELETE FROM san_pham WHERE ma_san_pham=?";
+		$this->setQuery($sql);
+		$kq=$this->execute(array($ma_san_pham));
+		return $kq->rowCount();	
+	}
 }
 ?>

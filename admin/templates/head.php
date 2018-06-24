@@ -27,6 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="public/layout/js/modernizr.js"></script>
 <script src="public/layout/js/jquery.cookie.js"></script>
 <script src="public/layout/js/screenfull.js"></script>
+
+<!--CKEDITOR--->
+<script src="../public/ckeditor/ckeditor.js"></script>
+<!--end- CKEDITOR--->
 		<script>
 		$(function () {
 			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
