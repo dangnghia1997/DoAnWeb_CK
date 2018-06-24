@@ -77,8 +77,8 @@
 					
 				</ul>
 			</li>
-            <li>
-				<a href="tables.html">
+            <li class="has-subnav">
+				<a href="javascript:;">
 					<i class="icon-table nav-icon"></i>
 					<span class="nav-text">
 					Sản phẩm

@@ -15,5 +15,7 @@
 	</section>
 	<script src="public/layout/js/bootstrap.js"></script>
 	<script src="public/layout/js/proton.js"></script>
+    <script src="public/layout/js/preview_img.js"></script>
+    
 </body>
 </html>

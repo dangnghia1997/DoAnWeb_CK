@@ -31,6 +31,17 @@ class M_nha_cung_cap extends database
 			return $kq->rowCount();
 		}
 		
+		public function Cap_nhat_nha_cung_cap($ma_nha_cung_cap,$ten_nha_cung_cap,$hinh)
+		{
+			$sql="UPDATE nha_cung_cap SET ten_nha_cung_cap=?,hinh=? ";
+			$sql.="WHERE ma_nha_cung_cap=?";
+			$this->setQuery($sql);
+			$parram=array($ten_nha_cung_cap,$hinh,$ma_nha_cung_cap);
+			$kq=$this->execute($parram);
+			return $kq->rowCount();
+				
+		}
+		
 		public function Xoa_nha_cung_cap($ma_nha_cung_cap)
 		{
 		$sql="DELETE FROM nha_cung_cap ";
