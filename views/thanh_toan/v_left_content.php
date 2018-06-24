@@ -4,6 +4,11 @@
       <div class="woocommerce-billing-fields">
       <form method="post" action="">
         <h3>Thông tin giao hàng</h3>
+     <?php
+     if(!isset($_SESSION['id_user']))
+	 {
+		 //Khi chưa đăng nhập hiện form cho khách vãn lai
+	 ?>   
         <p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
           <!--<label class="" for="billing_country">Country <abbr title="required" class="required">*</abbr> </label>-->
         
@@ -39,50 +44,56 @@
 			?>
           </select>
         </p>
-        
         <select class="country_to_state country_select" id="quan_huyen" name="quan_huyen_dh">
             <option value="null" selected="">----------------</option>
 
           </select>
-          
-         <p id="order_comments_field" class="form-row notes">
+        <p id="order_comments_field" class="form-row notes">
                       <!--<label class="" for="order_comments">Order Notes</label>-->
                       <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="ghi_chu_dh"></textarea>
                     </p> 
-          
-          
-        <!--<p id="billing_company_field" class="form-row form-row-wide">
-          <label class="" for="billing_company">Company Name</label>
-          <input type="text" value="" placeholder="" id="billing_company" name="billing_company" class="input-text ">
-        </p>-->
+     <?php
+	 }
+	 else
+	 {	//Khi đã đăng nhập hiện form của tài khoản
+	 	include("models/m_user.php");
+		$m_user=new M_user();
+		$user=$m_user->Doc_user_theo_id($_SESSION['id_user']);
+		echo "<pre>";
+		print_r($user);
+		echo "</pre>";
+	 ?>
+     	<p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+          <!--<label class="" for="billing_country">Country <abbr title="required" class="required">*</abbr> </label>-->
         
-       <!-- <p id="billing_address_2_field" class="form-row form-row-wide address-field">
-          <input type="text" value="" placeholder="Apartment, suite, unit etc. (optional)" id="billing_address_2" name="billing_address_2" class="input-text ">
-        </p>
-        <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
-          <label class="" for="billing_city">Town / City <abbr title="required" class="required">*</abbr> </label>
-          <input type="text" value="" placeholder="Town / City" id="billing_city" name="billing_city" class="input-text ">
-        </p>
-        <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-          <label class="" for="billing_state">County</label>
-          <input type="text" id="billing_state" name="billing_state" placeholder="State / County" value="" class="input-text ">
-        </p>
-        <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
-          <label class="" for="billing_postcode">Postcode <abbr title="required" class="required">*</abbr> </label>
-          <input type="text" value="" placeholder="Postcode / Zip" id="billing_postcode" name="billing_postcode" class="input-text ">
+        <p id="billing_first_name_field" class="form-row form-row-first validate-required">
+          <!--<label class="" for="billing_first_name">First Name <abbr title="required" class="required">*</abbr> </label>-->
+          <input type="text"  placeholder="Họ và tên" id="billing_first_name" name="ho_ten_dh" class="input-text " value="<?php echo $user[0]['ten_day_du']?>" readonly="readonly">
         </p>
         
-        
-        <div class="clear"></div>-->
-        
-        <!--<div class="create-account">
-                      <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
-                      <p id="account_password_field" class="form-row validate-required">
-                        <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr> </label>
-                        <input type="password" value="" placeholder="Password" id="account_password" name="account_password" class="input-text">
-                      </p>
-                      <div class="clear"></div>
-                    </div>--> 
+        <div class="clear"></div>
+        <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
+          <!--<label class="" for="billing_email">Email Address <abbr title="required" class="required">*</abbr> </label>-->
+          <input type="text" value="<?php echo $user[0]['email']?>" placeholder="Email" id="billing_email" name="email_dh" class="input-text " readonly="readonly">
+        </p>
+        <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
+          <!--<label class="" for="billing_phone">Phone <abbr title="required" class="required">*</abbr> </label>-->
+          <input type="text" value="<?php echo $user[0]['so_dien_thoai']?>" placeholder="Số điện thoại" id="billing_phone" name="sdt_dh" class="input-text" readonly="readonly">
+        </p>
+        <div class="clear"></div>
+        <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
+          <!--<label class="" for="billing_address_1">Address <abbr title="required" class="required">*</abbr> </label>-->
+          <input type="text" value="<?php echo $user[0]['dia_chi']?>" placeholder="Địa chỉ" id="billing_address_1" name="dia_chi_dh" class="input-text">
+        </p>
+            
+        <p id="order_comments_field" class="form-row notes">
+                      <!--<label class="" for="order_comments">Order Notes</label>-->
+                      <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="ghi_chu_dh"></textarea>
+                    </p> 
+     
+     <?php
+	 }
+	 ?>       
       </div>
     </div>
     <!--<div class="col-2">
