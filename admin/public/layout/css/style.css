@@ -4680,3 +4680,27 @@ img.hinh_san_pham.nha_cung_cap
 {
 	background-color:#663399;
 }
+
+/* Phân trang */
+.div_phan_trang
+{
+	width:100%;
+	text-align:center;
+	height:50px;
+}
+.div_trang
+{
+	width: 30px;
+	padding: 8px 13px 8px 13px;
+	text-align:center;
+	background: #ffffff;
+	margin: 0px;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+}
+.div_trang a
+{
+	text-decoration:none;
+}
+
+/* Phân trang */
