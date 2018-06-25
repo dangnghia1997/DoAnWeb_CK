@@ -25,7 +25,14 @@
                             <th>Ghi Chú</th>
 							<th>Trạng Thái</th>
 							<th>Quyền</th>
+                            <?php 
+							if($_SESSION['admin']['lv']==2) //Khi là admin mới hiện
+							{
+							?>
 							<th>Hủy</th>
+                            <?php
+							}
+							?>
 						  </tr>
 						</thead>
 						<tbody>
@@ -57,6 +64,10 @@ if (result) {
                             
                             </td>
                         	<td><?php echo ($kh->thanh_vien==0?"Khách":"Là Thành Viên")?></td>
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//Khi là admin mới hiện
+							{
+							?>
                             <td>
                                 
                                     <button type="button" class="btn btn-danger" onclick="var result = confirm('Bạn thực sự muốn xóa dữ liệu này?\n Việc này sẽ mất dữ liệu của bạn.\n Bạn chắc chứ?');
@@ -67,6 +78,9 @@ if (result) {
                                     </button>
                                 
                             </td>
+                            <?php
+							}
+							?>
 						</tr>
 						<?php
 						}

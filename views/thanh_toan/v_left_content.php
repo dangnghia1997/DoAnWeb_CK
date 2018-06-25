@@ -88,7 +88,10 @@
             
         <p id="order_comments_field" class="form-row notes">
                       <!--<label class="" for="order_comments">Order Notes</label>-->
-                      <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="ghi_chu_dh"></textarea>
+                      
+						<textarea  name="ghi_chu_dh" class="ckeditor" placeholder="Ghi chú đơn hàng"></textarea>
+										
+
                     </p> 
      
      <?php
@@ -395,3 +398,4 @@
                 </div>--> 
   </div>
 </div>
+

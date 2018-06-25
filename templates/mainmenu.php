@@ -39,7 +39,7 @@ $(function() {
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.php">Trang Chủ</a></li>
                         <li><a href="san_pham.php">Tất cả Sản Phẩm</a></li>
-                        <li><a href="kien_thuc_the_hinh.php">Kiến thức thể hình</a></li>
+                        <li><a href="gioi_thieu.php">Giới thiệu</a></li>
                         <li><a href="gio_hang.php">Giỏ hàng</a></li>
                         <li><a href="thanh_toan.php">Thanh toán</a></li>
                         <!-- <li><a href="#">Category</a></li> -->

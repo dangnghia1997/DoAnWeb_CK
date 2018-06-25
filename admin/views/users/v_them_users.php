@@ -61,8 +61,12 @@
                                                 </div>
 												<div class="radio block">
                                                     <label>
-                                                        <input type="radio" name="quyen"value="1" > Quản lý
+                                                        <input type="radio" name="quyen"value="1" > Nhân Viên
                                                     </label>
+                                                </div>
+                                                <div class="radio block">
+                                                	<label>
+                                                    	<input type="radio"  name="quyen" value="2">Quản lý/Admin</label>
                                                 </div>
 											</div>
                                             

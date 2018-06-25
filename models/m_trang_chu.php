@@ -1,13 +1,13 @@
 <?php
 include_once("database.php");
-class M_Trang_Chu extends database 
+class M_Trang_Chu extends database
 {
 		public function Doc_tat_ca_nha_cung_cap()
 		{
 			$sql="SELECT * FROM nha_cung_cap";
-			$this->setQuery($sql); //chuẩn bị câu lệnh
+			$this->setQuery($sql);
 			
-			return $this->loadAllRows(); // trả về mảng đối tượng	
+			return $this->loadAllRows();	
 		}
 		
 		
@@ -18,7 +18,7 @@ class M_Trang_Chu extends database
 			$this->setQuery($sql);
 			$parram=array($ma_nha_cung_cap);
 			
-			return $this->loadRow($parram);	 //trả một dòng 
+			return $this->loadRow($parram);	
 		}
 }
 

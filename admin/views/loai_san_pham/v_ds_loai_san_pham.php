@@ -19,9 +19,15 @@
 							<th>STT</th>
 							<th>Mã loại</th>
 							<th>Tên Loại</th>
+                            <?php
+                            if($_SESSION['admin']['lv']==2) //Khi admin mới hiện
+							{
+							?>
 							<th>Cập nhật</th>
 							<th>Xóa</th>
-							
+							<?php
+							}
+							?>
 						  </tr>
 						</thead>
 						<tbody>
@@ -35,6 +41,12 @@
 							<td><?php echo ++$i;?></td>
 							<td><?php echo $loai_san_pham->ma_loai;?></td>
 							<td><?php echo $loai_san_pham->ten_loai;?></td>
+                            
+                            
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+							{
+							?>
 							<td>
                                 <a href="capnhat_loai_san_pham.php?ma_loai=<?php echo $loai_san_pham->ma_loai;?>">
                                     <button type="button" class="btn btn-success">
@@ -52,7 +64,9 @@ if (result) {
                                     </button>
                                 
                             </td>
-							
+							<?php
+							}
+							?>
 						  </tr>
 						  
 						 <?php

@@ -36,12 +36,15 @@
 												<input type="file" class="form-control1 input-lg" id="hinh" name="hinh" />
 											</div>
 										</div>
-										<div class="col-md-4">
+										<div class="form-group mb-n">
+                                        
                                         	<img id="img_preview" class="hinh_san_pham nha_cung_cap" src="../public/layout/images/nha_cung_cap/<?php echo $nha_cung_cap->hinh?>" alt="hinhsanpham">
                                         </div>
+                                        
+                                       
                                         <div class="form-group mb-n">
-                                        	<div class="col-sm-8"></div>
-                                        	<div class="col-sm-4">
+                                        	<div class="col-sm-7"></div>
+                                        	<div class="col-sm-5">
                                             	<a href="ds_nha_cung_cap.php"><i class="fa fa-reply-all"></i> Về trang danh sách</a>
 												<button type="submit" class="btn btn-default w3ls-button" name="btn_cap_nhat_nha_cung_cap">Cập Nhật</button>
                                             </div>

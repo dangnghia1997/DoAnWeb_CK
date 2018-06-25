@@ -23,9 +23,15 @@
                             <th>Số điện thoại</th>
                             <th>Địa chỉ</th>
                             <th>Quyền</th>
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+							{
+							?>
 							<th>Cập nhật</th>
 							<th>Xóa</th>
-							
+							<?php
+							}
+							?>
 						  </tr>
 						</thead>
 						<tbody>
@@ -43,8 +49,11 @@
                             <td><?php echo $u['ten_day_du']?></td>
                             <td><?php echo $u['so_dien_thoai']?></td>
                             <td><?php echo $u['dia_chi']?></td>
-                            <td><?php echo ($u['quyen']==0?"Thành Viên":"Quản Lý");?></td>
-                            
+                            <td><?php echo ($u['quyen']==0?"Thành Viên":"Nhân Viên");?></td>
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+							{
+							?>
 							<td>
                                 <a href="capnhat_users.php?id=<?php echo $u['id']?>">
                                     <button type="button" class="btn btn-success">
@@ -62,7 +71,9 @@ if (result) {
                                     </button>
                                 
                             </td>
-                            
+                            <?php
+							}
+							?>
 						</tr>
 						<?php
 							}

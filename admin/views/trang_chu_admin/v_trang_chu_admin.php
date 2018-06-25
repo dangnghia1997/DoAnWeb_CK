@@ -1,6 +1,8 @@
+
+
 <div class="main-grid">
 			
-			<div class="social grid">
+			<!--<div class="social grid">
 					<div class="grid-info">
 						<div class="col-md-3 top-comment-grid">
 							<div class="comments likes">
@@ -52,83 +54,15 @@
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-			</div>
+			</div>-->
 			
-			<div class="agile-grids">
-				<div class="col-md-4 charts-right">
-					<!-- area-chart -->
-					<div class="area-grids">
-						<div class="area-grids-heading">
-							<h3>Area charts</h3>
-						</div>
-						<div id="graph4"></div>
-						<script>
-							Morris.Donut({
-							  element: 'graph4',
-							  data: [
-								{value: 70, label: 'foo', formatted: 'at least 70%' },
-								{value: 15, label: 'bar', formatted: 'approx. 15%' },
-								{value: 10, label: 'baz', formatted: 'approx. 10%' },
-								{value: 5, label: 'A really really long label', formatted: 'at most 5%' }
-							  ],
-							  formatter: function (x, data) { return data.formatted; }
-							});
-						</script>
-
-					</div>
-					<!-- //area-chart -->
-				</div>
-				<div class="col-md-8 chart-left">
-					<!-- updating-data -->
-					<div class="agile-Updating-grids">
-						<div class="area-grids-heading">
-							<h3>Updating data</h3>
-						</div>
-						<div id="graph1"></div>
-						<script>
-						var nReloads = 0;
-						function data(offset) {
-						  var ret = [];
-						  for (var x = 0; x <= 360; x += 10) {
-							var v = (offset + x) % 360;
-							ret.push({
-							  x: x,
-							  y: Math.sin(Math.PI * v / 180).toFixed(4),
-							  z: Math.cos(Math.PI * v / 180).toFixed(4)
-							});
-						  }
-						  return ret;
-						}
-						var graph = Morris.Line({
-							element: 'graph1',
-							data: data(0),
-							xkey: 'x',
-							ykeys: ['y', 'z'],
-							labels: ['sin()', 'cos()'],
-							parseTime: false,
-							ymin: -1.0,
-							ymax: 1.0,
-							hideHover: true
-						});
-						function update() {
-						  nReloads++;
-						  graph.setData(data(5 * nReloads));
-						  $('#reloadStatus').text(nReloads + ' reloads');
-						}
-						setInterval(update, 100);
-						</script>
-
-					</div>
-					<!-- //updating-data -->
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+			
 			
 			<div class="agile-bottom-grids">
-				<div class="col-md-6 agile-bottom-right">
+				<div class="col-md-12 agile-bottom-right">
 					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
-							<h3>Stacked Bars chart</h3>
+							<h3>Biểu đồ thống kê doanh thu theo ngày(Đơn vị: VND)</h3>
 						</div>
 						<div id="graph6"></div>
 						<script>
@@ -136,15 +70,28 @@
 						Morris.Bar({
 						  element: 'graph6',
 						  data: [
-							{x: '2011 Q1', y: 0},
-							{x: '2011 Q2', y: 1},
-							{x: '2011 Q3', y: 2},
-							{x: '2011 Q4', y: 3},
-							{x: '2012 Q1', y: 4},
-							{x: '2012 Q2', y: 5},
-							{x: '2012 Q3', y: 6},
-							{x: '2012 Q4', y: 7},
-							{x: '2013 Q1', y: 8}
+						  <?php
+						  for($i=0;$i<count($ds_thong_ke);$i++)
+						  {
+							 $arr=explode("-",$ds_thong_ke[$i]->ngay_dat);
+							 $ngay_thang_nam=$arr[2]."/".$arr[1]."/".$arr[0];
+							  if($i==count($ds_thong_ke)-1)
+							  {
+						  ?>
+						  	
+							{x: '<?php echo $ngay_thang_nam?>', y: <?php echo$ds_thong_ke[$i]->TIEN ?>}
+							
+						  <?php
+						  		break;
+							  }
+							  else
+							  {
+						  ?>
+						  	{x: '<?php echo $ngay_thang_nam?>', y: <?php echo$ds_thong_ke[$i]->TIEN ?>},
+						  <?php
+							  }
+						  }
+						  ?>						
 						  ],
 						  xkey: 'x',
 						  ykeys: ['y'],
@@ -162,7 +109,7 @@
 						</script>
 					</div>
 				</div>
-				<div class="col-md-6 agile-bottom-left">
+				<!--<div class="col-md-6 agile-bottom-left">
 					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
 							<h3>Stacked Bars chart</h3>
@@ -185,83 +132,41 @@
 						});
 						</script>
 					</div>
-				</div>
+				</div>-->
 				<div class="clearfix"> </div>
 			</div>
 			<div class="agile-last-grids">
-				<div class="col-md-4 agile-last-left">
+				
+				<div class="col-md-12 agile-last-left agile-last-right">
 					<div class="agile-last-grid">
 						<div class="area-grids-heading">
-							<h3>Daylight savings time</h3>
-						</div>
-						<div id="graph7"></div>
-						<script>
-						// This crosses a DST boundary in the UK.
-						Morris.Area({
-						  element: 'graph7',
-						  data: [
-							{x: '2013-03-30 22:00:00', y: 3, z: 3},
-							{x: '2013-03-31 00:00:00', y: 2, z: 0},
-							{x: '2013-03-31 02:00:00', y: 0, z: 2},
-							{x: '2013-03-31 04:00:00', y: 4, z: 4}
-						  ],
-						  xkey: 'x',
-						  ykeys: ['y', 'z'],
-						  labels: ['Y', 'Z']
-						});
-						</script>
-
-					</div>
-				</div>
-				<div class="col-md-4 agile-last-left agile-last-middle">
-					<div class="agile-last-grid">
-						<div class="area-grids-heading">
-							<h3>Daylight savings time</h3>
-						</div>
-						<div id="graph8"></div>
-						<script>
-						/* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
-						var day_data = [
-						  {"period": "2012-10-01", "licensed": 3407, "sorned": 660},
-						  {"period": "2012-09-30", "licensed": 3351, "sorned": 629},
-						  {"period": "2012-09-29", "licensed": 3269, "sorned": 618},
-						  {"period": "2012-09-20", "licensed": 3246, "sorned": 661},
-						  {"period": "2012-09-19", "licensed": 3257, "sorned": 667},
-						  {"period": "2012-09-18", "licensed": 3248, "sorned": 627},
-						  {"period": "2012-09-17", "licensed": 3171, "sorned": 660},
-						  {"period": "2012-09-16", "licensed": 3171, "sorned": 676},
-						  {"period": "2012-09-15", "licensed": 3201, "sorned": 656},
-						  {"period": "2012-09-10", "licensed": 3215, "sorned": 622}
-						];
-						Morris.Bar({
-						  element: 'graph8',
-						  data: day_data,
-						  xkey: 'period',
-						  ykeys: ['licensed', 'sorned'],
-						  labels: ['Licensed', 'SORN'],
-						  xLabelAngle: 60
-						});
-						</script>
-					</div>
-				</div>
-				<div class="col-md-4 agile-last-left agile-last-right">
-					<div class="agile-last-grid">
-						<div class="area-grids-heading">
-							<h3>Daylight savings time</h3>
+							<h3>Biểu đồ thống kê doanh thu theo ngày(Đơn vị: VND)</h3>
 						</div>
 						<div id="graph9"></div>
 						<script>
 						var day_data = [
-						  {"elapsed": "I", "value": 34},
-						  {"elapsed": "II", "value": 24},
-						  {"elapsed": "III", "value": 3},
-						  {"elapsed": "IV", "value": 12},
-						  {"elapsed": "V", "value": 13},
-						  {"elapsed": "VI", "value": 22},
-						  {"elapsed": "VII", "value": 5},
-						  {"elapsed": "VIII", "value": 26},
-						  {"elapsed": "IX", "value": 12},
-						  {"elapsed": "X", "value": 19}
+						 <?php
+						  for($i=0;$i<count($ds_thong_ke);$i++)
+						  {
+							 $arr=explode("-",$ds_thong_ke[$i]->ngay_dat);
+							 $ngay_thang_nam=$arr[2]."/".$arr[1]."/".$arr[0];
+							  if($i==count($ds_thong_ke)-1)
+							  {
+						  ?>
+						  	
+							{"elapsed": "<?php echo $ngay_thang_nam?>", "value": <?php echo$ds_thong_ke[$i]->TIEN ?>}
+							
+						  <?php
+						  		break;
+							  }
+							  else
+							  {
+						  ?>
+						  	{"elapsed": "<?php echo $ngay_thang_nam?>", "value": <?php echo$ds_thong_ke[$i]->TIEN ?>},
+						  <?php
+							  }
+						  }
+						  ?>	
 						];
 						Morris.Line({
 						  element: 'graph9',
@@ -278,7 +183,7 @@
 				<div class="clearfix"> </div>
 			</div>
 
-			<div class="agile-two-grids">
+			<!--<div class="agile-two-grids">
 				<div class="col-md-6 count">
 						<div class="count-grid">
 							<h3 class="title">Countdown</h3>
@@ -392,5 +297,7 @@
 					</div>
 				</div>
 				<div class="clearfix"> </div>
-			</div>
+			</div>-->
 		</div>
+        
+        

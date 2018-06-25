@@ -23,9 +23,15 @@
                             <th>Hình ảnh</th>
                             <th>Đơn Giá</th>
                             <th>Mô tả</th>
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//khi admin mới hiện
+							{
+							?>
 							<th>Cập nhật</th>
 							<th>Xóa</th>
-							
+							<?php
+							}
+							?>
 						  </tr>
 						</thead>
 						<tbody>
@@ -44,6 +50,11 @@
                             </td>
 							<td><?php echo number_format($sp->don_gia)?></td>
                             <td><?php echo $sp->mo_ta?></td>
+                            
+                            <?php
+                            if($_SESSION['admin']['lv']==2)//Khi admin mới hiện ra
+							{
+							?>
 							<td>
                                 <a href="capnhat_san_pham.php?ma_san_pham=<?php echo $sp->ma_san_pham;?>">
                                     <button type="button" class="btn btn-success">
@@ -61,7 +72,9 @@ if (result) {
                                     </button>
                                 
                             </td>
-							
+							<?php
+							}
+							?>
 						  </tr>
 						  
 						<?php

@@ -29,11 +29,18 @@
 						<i class="fa fa-list-alt"></i> Danh sách user
 					</a>
 					</li>
+                    <?php 
+					if($_SESSION['admin']['lv']==2) //Khi admin mới hiện
+					{
+					?>
 					<li>
 					<a class="subnav-text" href="them_users.php">
 						<i class="fa fa-plus"></i> Thêm user
 					</a>
 					</li>
+                    <?php
+					}
+					?>
 				</ul>
 			</li>
 			<li class="has-subnav">
@@ -50,11 +57,18 @@
                         <i class="fa fa-list-alt"></i> Danh sách Loại sản phẩm
                         </a>
 					</li>
+                    <?php
+                    if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+					{
+					?>
 					<li>
 						<a class="subnav-text" href="them_loai_san_pham.php">
                         	<i class="fa fa-plus"></i> Thêm Lọai sản phẩm
                         </a>
 					</li>
+                    <?php
+					}
+					?>
 				</ul>
 			</li>
 			<li class="has-subnav">
@@ -69,12 +83,18 @@
 							<i class="fa fa-list-alt"></i> Danh sách Nhà cung cấp
 						</a>
 					</li>
+                    <?php
+                    if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+					{
+					?>
 					<li>
 						<a class="subnav-text" href="them_nha_cung_cap.php">
 							<i class="fa fa-plus"></i> Thêm Nhà cung cấp
 						</a>
 					</li>
-					
+					<?php
+					}
+					?>
 				</ul>
 			</li>
             <li class="has-subnav">
@@ -91,12 +111,18 @@
 							<i class="fa fa-list-alt"></i> Danh sách Sản phẩm
 						</a>
 					</li>
+                    <?php
+                    if($_SESSION['admin']['lv']==2)//Khi admin mới hiện
+					{
+					?>
 					<li>
 						<a class="subnav-text" href="them_san_pham.php">
 							<i class="fa fa-plus"></i> Thêm Sản phẩm
 						</a>
 					</li>
-					
+					<?php
+					}
+					?>
 				</ul>
 			</li>
             <li>
@@ -115,6 +141,10 @@
 					</span>
 				</a>
 			</li>
+            <?php 
+			if($_SESSION['admin']['lv']==2) //Khi là admin mới hiện
+			{
+			?>
 			<li>
 				<a href="thong_tin_admin.php">
                 	<i class="fa fa-user-md"></i>
@@ -124,7 +154,9 @@
 					</span>
 				</a>
 			</li>
-            
+            <?php
+			}
+			?>
             
             
 			<!--<li>

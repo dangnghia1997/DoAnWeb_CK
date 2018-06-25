@@ -66,7 +66,7 @@
                                                 </div>
                                                 <div class="radio block">
                                                     <label>
-                                                        <input type="radio" name="quyen"value="1" > Quản lý
+                                                        <input type="radio" name="quyen"value="1" > Nhân Viên
                                                     </label>
                                                 </div>
                                             <?php
@@ -80,7 +80,7 @@
                                                 </div>
 												<div class="radio block">
                                                     <label>
-                                                        <input type="radio" checked="checked" name="quyen"value="1" > Quản lý
+                                                        <input type="radio" checked="checked" name="quyen"value="1" > Nhân Viên
                                                     </label>
                                                 </div>
 											</div>
@@ -90,8 +90,8 @@
 										</div>
                                         
                                         <div class="form-group mb-n">
-                                        	<div class="col-sm-8"></div>
-                                        	<div class="col-sm-4">
+                                        	<div class="col-sm-7"></div>
+                                        	<div class="col-sm-5">
                                             	<a href="ds_users.php"><i class="fa fa-reply-all"></i> Về trang danh sách</a>
 												<button type="submit" class="btn btn-default w3ls-button" name="btn_cap_nhat_user">Cập nhật</button>
                                             </div>

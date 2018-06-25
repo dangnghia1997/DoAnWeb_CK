@@ -7,12 +7,12 @@
 					<button id="toggle"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>	
 				</section>
 			</div>
-			<div class="w3l_search">
+			<!--<div class="w3l_search">
 				<form action="#" method="post">
 					<input type="text" name="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required>
 					<button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
-			</div>
+			</div>--> <!--SEARCH-->
 			<div class="header-right">
 				<div class="profile_details_left">
 					<div class="header-right-left">

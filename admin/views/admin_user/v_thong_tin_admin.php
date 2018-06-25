@@ -55,8 +55,8 @@
                                         
                                         
                                         <div class="form-group mb-n">
-                                        	<div class="col-sm-8"></div>
-                                        	<div class="col-sm-4">
+                                        	<div class="col-sm-7"></div>
+                                        	<div class="col-sm-5">
                                             	<a href="index_quan_tri.php"><i class="fa fa-reply-all"></i> Về trang quản trị</a>
 												<button type="submit" class="btn btn-default w3ls-button" name="btn_luu_tt_admin">Lưu</button>
                                             </div>

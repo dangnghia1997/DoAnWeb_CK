@@ -38,6 +38,23 @@ class M_khach_hang extends database
 		$kq=$this->execute($parram);
 		return $kq->rowCount();	
 	}
+	
+	public function Doc_nhung_khach_hang_da_thanh_toan()
+	{
+		$sql="SELECT * FROM khach_hang WHERE trang_thai=1";
+		$this->setQuery($sql);
+		
+		return $this->loadAllRows();	
+	}
+	
+	public function Thong_ke_tong_tien_theo_ngay_dat($chuoi)
+	{
+		$sql="SELECT ngay_dat,sum(tong_tien) as TIEN FROM (SELECT * FROM `don_hang` WHERE ma_khach_hang IN($chuoi)) as bang_don_hang_da_thanh_Toan GROUP BY ngay_dat";
+		
+		
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
 
 }
 ?>
