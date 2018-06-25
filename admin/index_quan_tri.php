@@ -1,7 +1,13 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['admin']['name']))
+{
+	header('location:index.php');
+}
+else
+{
 //views
 $view="views/trang_chu_admin/v_trang_chu_admin.php";
 include("templates/layout.php");
-
+}
 ?>

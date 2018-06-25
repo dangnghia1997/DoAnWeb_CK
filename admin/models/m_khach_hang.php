@@ -18,6 +18,26 @@ class M_khach_hang extends database
 		$parram=array($ma_khach_hang);
 		return $this->loadRow($parram);	
 	}
+	
+	public function Xoa_khach_hang($ma_khach_hang)
+	{
+		$sql="DELETE FROM khach_hang WHERE ma_khach_hang=?";
+		$this->setQuery($sql);
+		$parram=array($ma_khach_hang);
+		$kq=$this->execute($parram);
+		return $kq->rowCount();	
+	}
+	
+	public function Cap_nhat_khach_hang($ma_khach_hang,$ten_khach_hang,$email,$dia_chi,$so_dien_thoai,$ghi_chu,$trang_thai,$thanh_vien)
+	{
+		$sql="UPDATE khach_hang SET ten_khach_hang=?,email=?,dia_chi=?,so_dien_thoai=?,ghi_chu=?,trang_thai=?,thanh_vien=? ";
+		$sql.="WHERE ma_khach_hang=?";
+		$this->setQuery($sql);
+		
+		$parram=array($ten_khach_hang,$email,$dia_chi,$so_dien_thoai,$ghi_chu,$trang_thai,$thanh_vien,$ma_khach_hang);
+		$kq=$this->execute($parram);
+		return $kq->rowCount();	
+	}
 
 }
 ?>

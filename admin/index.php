@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['admin']['name']))
+{
+	header('location:index_quan_tri.php');	
+}
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -24,6 +31,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="public/layout/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 </head>
+
+
 <body class="signup-body">
 		<div class="agile-signup">	
 			
@@ -31,10 +40,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="grids-heading gallery-heading signup-heading">
 					<h2>ĐĂNG NHẬP</h2>
 				</div>
-				<form action="." method="post">
+				<form action="dang_nhap_admin.php" method="post">
 					<input type="email" name="email" value="" placeholder="Email">
-					<input type="password" name="Password" value="" placeholder="Password">
-					<input type="submit" class="register" value="Đăng nhập">
+					<input type="password" name="password" value="" placeholder="Password">
+					<input type="submit" class="register" value="Đăng nhập" name="btn_dang_nhap_admin">
 				</form>
 				<!--<div class="signin-text">
 					<div class="text-left">
@@ -45,16 +54,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="clearfix"> </div>
 				</div>-->
-				<h5>- OR -</h5>
-				<div class="footer-icons">
-					<ul>
-						<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" class="twitter facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" class="twitter chrome"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#" class="twitter dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-				<!--<a href="index.html">Back To Home</a>-->
+				
+				
+				
 			</div>
 			
 			<!-- footer -->

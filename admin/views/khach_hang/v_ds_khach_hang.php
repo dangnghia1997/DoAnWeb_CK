@@ -25,7 +25,7 @@
                             <th>Ghi Chú</th>
 							<th>Trạng Thái</th>
 							<th>Quyền</th>
-							
+							<th>Hủy</th>
 						  </tr>
 						</thead>
 						<tbody>
@@ -42,8 +42,31 @@
                             <td><?php echo $kh->dia_chi?></td>
                             <td><?php echo $kh->so_dien_thoai?></td>
                             <td><?php echo $kh->ghi_chu?></td>
-                            <td><?php echo ($kh->trang_thai==0?"Chưa thanh toán":"Đã Thanh Toán")?></td>
+                            <td><?php echo ($kh->trang_thai==0?"Chưa thanh toán":"Đã Thanh Toán")?>
+                            <?php
+                            if($kh->trang_thai==0)
+							{
+							?>
+                            <button type="button" class="btn btn-success" onclick="var result = confirm('Bạn thực sự muốn thanh toán?');
+if (result) {
+    window.location='khach_hang_thanh_toan.php?ma_khach_hang=<?php echo $kh->ma_khach_hang;?>'
+}">Thanh Toán</button>
+                            <?php
+							}
+							?>
+                            
+                            </td>
                         	<td><?php echo ($kh->thanh_vien==0?"Khách":"Là Thành Viên")?></td>
+                            <td>
+                                
+                                    <button type="button" class="btn btn-danger" onclick="var result = confirm('Bạn thực sự muốn xóa dữ liệu này?\n Việc này sẽ mất dữ liệu của bạn.\n Bạn chắc chứ?');
+if (result) {
+    window.location='huy_khach_hang.php?ma_khach_hang=<?php echo $kh->ma_khach_hang;?>'
+}">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                
+                            </td>
 						</tr>
 						<?php
 						}

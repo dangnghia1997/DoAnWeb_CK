@@ -33,10 +33,10 @@ class M_user
 	}
 	
 
-	public function Check_tai_khoan($email,$password)
+	public function Check_tai_khoan($email,$password,$quyen=0)
 	{
 		$sql="SELECT * FROM user ";
-		$sql.="WHERE email='$email' and password='$password'"	;
+		$sql.="WHERE email='$email' and password='$password' and quyen='$quyen' ";
 		
 		$result = mysqli_query($this->conn,$sql);
 		return mysqli_fetch_all($result,MYSQLI_ASSOC);

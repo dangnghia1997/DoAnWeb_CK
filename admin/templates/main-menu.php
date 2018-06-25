@@ -116,10 +116,11 @@
 				</a>
 			</li>
 			<li>
-				<a href="charts.html">
-					<i class="fa fa-bar-chart nav_icon"></i>
+				<a href="thong_tin_admin.php">
+                	<i class="fa fa-user-md"></i>
+					<!--<i class="fa fa-bar-chart nav_icon"></i>-->
 					<span class="nav-text">
-						Thống kê
+						Thông Tin Admin
 					</span>
 				</a>
 			</li>
@@ -168,10 +169,10 @@
 		</ul>
 		<ul class="logout">
 			<li>
-			<a href="login.html">
+			<a href="dang_xuat_admin.php">
 			<i class="icon-off nav-icon"></i>
 			<span class="nav-text">
-			Logout
+			Đăng Xuất
 			</span>
 			</a>
 			</li>

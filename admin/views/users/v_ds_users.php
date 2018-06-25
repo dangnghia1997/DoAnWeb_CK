@@ -33,7 +33,8 @@
 							$i=0;
                         foreach($ds_user as $u)
 						{
-							
+							if($u['quyen']!=2)
+							{	
 						?>
 						  <tr>
 							<td><?php echo ++$i;?></td>
@@ -43,6 +44,7 @@
                             <td><?php echo $u['so_dien_thoai']?></td>
                             <td><?php echo $u['dia_chi']?></td>
                             <td><?php echo ($u['quyen']==0?"Thành Viên":"Quản Lý");?></td>
+                            
 							<td>
                                 <a href="capnhat_users.php?id=<?php echo $u['id']?>">
                                     <button type="button" class="btn btn-success">
@@ -60,8 +62,10 @@ if (result) {
                                     </button>
                                 
                             </td>
+                            
 						</tr>
 						<?php
+							}
 						}
 						?>  
 						</tbody>
