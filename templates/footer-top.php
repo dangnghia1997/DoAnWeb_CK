@@ -24,7 +24,7 @@
                         <h2 class="footer-wid-title">Dịch vụ</h2>
                         <ul>
                             <li><a href=".">Trang Chủ</a></li>
-                            <li><a href="gioi_thieu.php">Giới thiệu</a></li>
+                            
                             <li><a href="" data-toggle="modal" data-target="#chinh_sach_doi_tra">Chính sách đổi trả</a></li>
                             <li><a href="lien_he.php">Liên hệ</a></li>
                             <li><a href="kien_thuc_the_hinh.php">Kiến thức thể hình</a></li>
@@ -36,11 +36,11 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Danh mục</h2>
                         <ul>
-                            <li><a href="#">Phát triển cơ</a></li>
-                            <li><a href="#">Tăng Cân</a></li>
-                            <li><a href="#">Tăng Sức Mạnh</a></li>
-                            <li><a href="#">Giảm cân - Đốt Mỡ</a></li>
-                            <li><a href="#">Khác</a></li>
+                            <li><a href="san_pham.php?ma_loai=1">Phát triển cơ</a></li>
+                            <li><a href="san_pham.php?ma_loai=2">Tăng Cân</a></li>
+                            <li><a href="san_pham.php?ma_loai=3">Tăng Sức Mạnh</a></li>
+                            <li><a href="san_pham.php?ma_loai=4">Giảm cân - Đốt Mỡ</a></li>
+                            <li><a href="san_pham.php?ma_loai=8">Khác</a></li>
                         </ul>                        
                     </div>
                 </div>

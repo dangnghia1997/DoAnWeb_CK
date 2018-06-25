@@ -50,7 +50,7 @@
           </select>
         <p id="order_comments_field" class="form-row notes">
                       <!--<label class="" for="order_comments">Order Notes</label>-->
-                      <textarea cols="5" rows="2" placeholder="Ghi chú đơn hàng" id="order_comments" class="input-text " name="ghi_chu_dh"></textarea>
+                      <textarea cols="5" rows="2"  id="order_comments" class="ckeditor" name="ghi_chu_dh">Ghi chú đơn hàng</textarea>
                     </p> 
      <?php
 	 }
@@ -59,9 +59,7 @@
 	 	include("models/m_user.php");
 		$m_user=new M_user();
 		$user=$m_user->Doc_user_theo_id($_SESSION['id_user']);
-		echo "<pre>";
-		print_r($user);
-		echo "</pre>";
+		
 	 ?>
      	<p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
           <!--<label class="" for="billing_country">Country <abbr title="required" class="required">*</abbr> </label>-->
@@ -89,7 +87,7 @@
         <p id="order_comments_field" class="form-row notes">
                       <!--<label class="" for="order_comments">Order Notes</label>-->
                       
-						<textarea  name="ghi_chu_dh" class="ckeditor" placeholder="Ghi chú đơn hàng"></textarea>
+						<textarea  name="ghi_chu_dh" class="ckeditor" placeholder="Ghi chú đơn hàng">Ghi chú đơn hàng</textarea>
 										
 
                     </p> 

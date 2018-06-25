@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 17, 2018 at 04:47 PM
+-- Generation Time: Jun 25, 2018 at 06:15 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -36,6 +36,52 @@ CREATE TABLE IF NOT EXISTS `chi_tiet_don_hang` (
   PRIMARY KEY (`ma_don_hang`,`ma_san_pham`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chi tiết đơn hàng';
 
+--
+-- Dumping data for table `chi_tiet_don_hang`
+--
+
+INSERT INTO `chi_tiet_don_hang` (`ma_don_hang`, `ma_san_pham`, `so_luong`) VALUES
+(1, 1, 3),
+(1, 2, 1),
+(1, 3, 1),
+(1, 4, 1),
+(2, 3, 4),
+(2, 132, 1),
+(2, 133, 3),
+(2, 137, 1),
+(3, 2, 1),
+(3, 3, 1),
+(3, 4, 2),
+(3, 173, 2),
+(3, 174, 1),
+(4, 3, 1),
+(4, 124, 1),
+(4, 126, 1),
+(4, 129, 1),
+(4, 132, 1),
+(4, 133, 1),
+(5, 4, 1),
+(5, 160, 1),
+(5, 161, 1),
+(5, 163, 1),
+(6, 2, 1),
+(6, 5, 10),
+(6, 54, 1),
+(6, 58, 1),
+(6, 59, 1),
+(6, 60, 1),
+(6, 104, 1),
+(6, 106, 1),
+(6, 130, 1),
+(6, 135, 1),
+(6, 161, 1),
+(6, 164, 1),
+(6, 167, 1),
+(6, 168, 1),
+(6, 169, 1),
+(6, 170, 19),
+(6, 171, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -50,7 +96,19 @@ CREATE TABLE IF NOT EXISTS `don_hang` (
   `hinh_thuc_thanh_toan` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `tong_tien` double NOT NULL,
   PRIMARY KEY (`ma_don_hang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Đơn hàng';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Đơn hàng';
+
+--
+-- Dumping data for table `don_hang`
+--
+
+INSERT INTO `don_hang` (`ma_don_hang`, `ma_khach_hang`, `ngay_dat`, `hinh_thuc_thanh_toan`, `tong_tien`) VALUES
+(1, 1, '2018-06-21', 'chuyển khoản', 6240000),
+(2, 2, '2018-06-21', 'chuyển khoản', 7850000),
+(3, 3, '2018-06-22', 'Tiền mặt', 7250000),
+(4, 4, '2018-06-23', 'chuyển khoản', 3500000),
+(5, 5, '2018-06-26', 'Tiền mặt', 2100000),
+(6, 6, '2018-06-26', 'chuyển khoản', 41390000);
 
 -- --------------------------------------------------------
 
@@ -69,7 +127,19 @@ CREATE TABLE IF NOT EXISTS `khach_hang` (
   `trang_thai` tinyint(3) NOT NULL DEFAULT '0',
   `thanh_vien` tinyint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ma_khach_hang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Khách hàng';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Khách hàng';
+
+--
+-- Dumping data for table `khach_hang`
+--
+
+INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_khach_hang`, `email`, `dia_chi`, `so_dien_thoai`, `ghi_chu`, `trang_thai`, `thanh_vien`) VALUES
+(1, 'Đặng Nghĩa', 'dangnghia25197@gmail.com', '1/6 Mễ Cốc ,Quận 8,Hồ Chí Minh', '01224588770', 'Giao hàng nhanh', 1, 0),
+(2, 'Tuấn', 'tuan_trinh@gmail.com', '1/6 Mễ Cốc ,Thành phố Thái Nguyên,Thái Nguyên', '01224588770', 'Giao hàng nhanh lên', 1, 0),
+(3, 'Khách hàng 1', 'khachhang@gmail.com', '123 Tùng Thiện Vương phường 13 quận 08', '09001780', '<p>Ghi ch&uacute; đơn h&agrave;ng</p>\r\n', 1, 1),
+(4, 'Lý Hiền Hạo', 'haoly@gmail.com', '45 Bắc Hải,Thị xã Hòa Bình,Hòa Bình', '0909102284', '<p>Giao nhanh em đang cần gấp</p>\r\n', 1, 0),
+(5, 'Trịn Minh Tuấn ', 'tuantrinh@gmail.com', '33 phạm thế hiển,Quận 8,Hồ Chí Minh', '01225475373', '<p><strong>Em đang tập tạ sắp hết wade giao gấp nha!</strong></p>\r\n', 1, 0),
+(6, 'Khách hàng 2', 'khachhang2@gmail.com', '33 Đinh Hòa Phường 13 Quận 08', '092248825', '<p>Th&ocirc;ng thả giao tại mua nhiều cứ từ từ</p>\r\n', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -108,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `loai_san_pham` (
   `ma_loai_cha` int(11) DEFAULT NULL,
   `ten_loai` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ma_loai`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Loại sản phẩm';
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Loại sản phẩm';
 
 --
 -- Dumping data for table `loai_san_pham`
@@ -165,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `nha_cung_cap` (
   `ten_nha_cung_cap` varchar(150) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Chưa cập nhật',
   `hinh` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ma_nha_cung_cap`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Nhà cung cấp';
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Nhà cung cấp';
 
 --
 -- Dumping data for table `nha_cung_cap`
@@ -183,7 +253,8 @@ INSERT INTO `nha_cung_cap` (`ma_nha_cung_cap`, `ten_nha_cung_cap`, `hinh`) VALUE
 (9, 'NUTREX', 'vendor_logo_9.png'),
 (10, 'OPTIMUM NUTRITION', 'vendor_logo_10.png'),
 (11, 'HARBINGER', 'vendor_logo_11.png'),
-(12, 'MUSCLE PHARM', 'vendor_logo_12.png');
+(12, 'MUSCLE PHARM', 'vendor_logo_12.png'),
+(16, 'test', 'android2.jpg');
 
 -- --------------------------------------------------------
 
@@ -1083,19 +1154,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `quyen` tinyint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng';
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `ten_day_du`, `so_dien_thoai`, `dia_chi`, `quyen`) VALUES
-(5, 'dangnghia25197@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Đặng Nghĩa', '01224588770', '1/6 Mễ cốc phường 15 quận 08', 0),
-(11, 'haolh@gmail.com', '111', 'Lý Hiền Hạo', '0990909090', '2/6 Mễ cốc phường 15 quận 08', 0),
-(13, 'tuantrinh@gmai.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trịnh Minh Tuấn', '01222222222', '111 Phạm Thê hiển p4 q8', 0),
-(17, 'a@gmail.com', '202cb962ac59075b964b07152d234b70', 'aaaaa', '0101010101', '123 uu long p11 q8', 0),
-(18, 'thanhdang564@yahoo.com.vn', 'e10adc3949ba59abbe56e057f20f883e', 'Đặng Thành', '0202020202', '1/6 Mễ Cốc p15 q8', 0),
-(19, 'nghiadeptrai@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nghĩa Nghĩa', '0902820854', '1/6 Mễ Cốc p15 q8', 0);
+(20, 'khachhang@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Khách hàng 1', '09001780', '123 Tùng Thiện Vương phường 13 quận 08', 0),
+(21, 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN', '0000000000', 'Đang Cập Nhật', 2),
+(22, 'nhanvien@gmail.com', '2a2fa4fe2fa737f129ef2d127b861b7e', 'Nhân Viên 1', '01224588770', '1/6 Mễ Cốc Phường 15 Quận 8', 1),
+(23, 'khachhang2@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Khách hàng 2', '092248825', '33 Đinh Hòa Phường 13 Quận 08', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
