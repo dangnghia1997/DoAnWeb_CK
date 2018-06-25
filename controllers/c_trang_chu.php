@@ -10,6 +10,7 @@ class C_trang_chu
 			$m_trang_chu=new M_Trang_Chu();
 			$danh_sach_nha_cung_cap=$m_trang_chu->Doc_tat_ca_nha_cung_cap();
 			
+			
 			$m_san_pham=new M_san_pham();
 			$ds_san_pham_top_ban_chay=$m_san_pham->Doc_tat_ca_san_pham(0,3);
 			$ds_san_pham_top_moi=$m_san_pham->Doc_tat_ca_san_pham(5,3);
